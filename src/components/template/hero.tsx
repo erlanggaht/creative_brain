@@ -1,7 +1,7 @@
 import Button_Gradient  from "@/components/atoms/button_popover";
 import Button_Default from "@/components/atoms/button_default";
 import { style_hover } from "@/utility/gradient_color";
-import hero_brain from '@/assets/business-3d-pink-brain (1).png'
+import hero_brain from '@/assets/hero_brain.png'
 import Tilt from 'react-parallax-tilt'
 // Gradient Color
 const {hover_text_gradient,hover_button_gradient} = style_hover()
