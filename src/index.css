@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  font-weight: 500;
+  color: #7079FE;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #7079FE;
+}
+
+body {
+  margin: 0;
+  background-color: #090915;
+  color: #fff;
+}
+
+[data-testid="flowbite-navbar-toggle"]  {
+  color: #fff ;
+  margin-left: 10px;
+}
+
+[data-testid="flowbite-navbar-toggle"]:hover  {
+  color: #7079FE ;
+}
