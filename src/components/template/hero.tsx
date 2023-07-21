@@ -1,6 +1,7 @@
 import Button_Gradient  from "@/components/atoms/button_popover";
 import Button_Default from "@/components/atoms/button_default";
 import { style_hover } from "@/utility/gradient_color";
+import hero_brain from '@/assets/business-3d-pink-brain (1).png'
 import Tilt from 'react-parallax-tilt'
 // Gradient Color
 const {hover_text_gradient,hover_button_gradient} = style_hover()
@@ -31,7 +32,7 @@ export default function Hero() {
     <div className="hero mx-auto  p-2 md:w-80 md:h-80 md:mb-12 my-28 relative" >
     <Tilt  transitionSpeed={4000}>
       <div className="md:w-[350px] md:h-[320px]">
-    <img src="/src/assets/business-3d-pink-brain (1).png" alt="brain" className="w-[350px] h-[320px] hero_img " />
+    <img src={hero_brain} alt="brain" className="w-[350px] h-[320px] hero_img " />
     </div>
    </Tilt>
    <div className="hero_shadow"></div>
