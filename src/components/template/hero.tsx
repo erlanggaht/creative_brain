@@ -49,7 +49,7 @@ export default function Hero() {
     </section>
 
       <div className="md:w-[350px] md:h-[320px]">
-    <img src={hero_brain} alt="brain" className="w-[325px] h-[300px] md:w-[350px] md:h-[320px] hero_img " />
+    <img src={hero_brain} alt="brain" loading="eager" className="w-[325px] h-[300px] md:w-[350px] md:h-[320px] hero_img " />
     </div>
    </Tilt>
    <div className="hero_shadow"></div>
