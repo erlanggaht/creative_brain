@@ -2,10 +2,21 @@
 
 import { Avatar, Dropdown, Navbar } from 'flowbite-react';
 import { style_hover } from '@/utility/gradient_color';
+import { useEffect } from 'react';
 
 const {text_gradient} = style_hover()
 
 export default function Navigasi_Mobile() {
+
+ 
+  function glitch(e : any) {
+    const dataTitle = document.querySelector('[data-text]')
+    if(e.type === 'mouseenter') dataTitle?.classList.add('glitch')
+    else dataTitle?.classList.remove('glitch')
+
+  
+  }
+
   return (
     <Navbar
       fluid
@@ -14,14 +25,16 @@ export default function Navigasi_Mobile() {
 
     >
       <Navbar.Brand href="#">
-        <h1 className='uppercase text-2xl text-ping font-[700]'>Erlan<span className='text-white'>gga</span></h1>
+      <div className="glitch-wrapper">
+      <div className="text-[30px] text-ping" data-text="Erlangga" onMouseEnter={(e) => glitch(e)} onMouseLeave={(e) => glitch(e)} tabIndex={-1}>Erlan<span className='text-white'>gga</span></div>
+      </div>
       </Navbar.Brand>
       <div className="flex md:order-2">
         <Dropdown
           inline
-          label={<Avatar alt="User settings" img="https://res.cloudinary.com/djsizjaee/image/upload/v1684489838/erlangga_etodo4.png" rounded/>}
+          label={<Avatar alt="User settings" img="https://res.cloudinary.com/djsizjaee/image/upload/f_auto,q_auto/v1/sinarasih/galeri/kzbh5qbwofe7hbeftsvo" rounded/>}
         >
-          <Dropdown.Header>
+          <Dropdown.Header className='z-[999]'>
             <span className="block text-sm">
               Erlanggaht
             </span>
@@ -29,15 +42,21 @@ export default function Navigasi_Mobile() {
               erlanggahidayat.md@gmail.com
             </span>
           </Dropdown.Header>
-          <Dropdown.Item>
+          <a href='https://erlanggaht.vercel.app/projects'>
+            <Dropdown.Item>
             Projects
           </Dropdown.Item>
-          <Dropdown.Item>
+          </a>
+          <a href='https://erlanggaht93.vercel.app'>
+            <Dropdown.Item>
             Portofolio
           </Dropdown.Item>
-          <Dropdown.Item>
-            Guthub
+          </a>
+          <a href='https://github.com/erlanggaht'>
+            <Dropdown.Item>
+            Github
           </Dropdown.Item>
+          </a>
           <Dropdown.Divider />
           <Dropdown.Item>
             LightMode
@@ -49,17 +68,17 @@ export default function Navigasi_Mobile() {
         <Navbar.Link
           active
           href="#"
-          className={`bg-ungu hover:text-gray-300  md:hover:text-ping`}
+          className={`bg-white hover:text-gray-300  md:hover:text-ping`}
           
         >
           <p className={`${text_gradient}  md:hover:text-ping`}>
             Home
           </p>
         </Navbar.Link>
-        <Navbar.Link href="#" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu'>
-          About
+        <Navbar.Link href="https://erlanggaht.vercel.app" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu'>
+          LinkBio
         </Navbar.Link>
-        <Navbar.Link href="#" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu'>
+        <Navbar.Link href="https://instagram.com/erlanggaht93" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu'>
           Instagram
         </Navbar.Link>
         <Navbar.Link href="#" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu'>

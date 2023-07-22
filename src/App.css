@@ -1,8 +1,9 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding:  1.5rem 2rem;
+  padding:  0rem 2rem;
   font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
 }
 
 
@@ -20,6 +21,9 @@
   border-radius: 100%;
 }
 
+.hero_shadow:hover {
+  box-shadow :16px 32px 900px  red; 
+}
 
 @media (max-width: 768px) {
   #root {
@@ -32,7 +36,7 @@
     width: 230px;
     position: absolute;
     background-color: transparent;
-    top: 42px;
+    top: 32px;
     right: 0;
     left: 48px;
     bottom: 0;
@@ -41,3 +45,128 @@
   }
 
  }
+
+ input,input:focus,textarea {
+  font-size: 16px;
+ }
+
+
+ .glitch-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.glitch {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f3899b;
+  letter-spacing: 1px;
+  z-index: 1;
+  cursor: text;
+}
+
+.glitch:before,
+.glitch:after {
+  display: block;
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+
+.glitch:before {
+  animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  color: #00FFFF;
+  z-index: -1;
+}
+
+.glitch:after {
+  animation: glitch-it 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  color: #FF00FF;
+  z-index: -2;
+}
+
+.app_shadow:before{
+  box-shadow :-56px 92px 1100px 50px  #666 ;  transform-style: preserve-3d;
+  background-color: transparent !important;
+  z-index: -9999;
+  opacity: 0.8;
+}
+
+@keyframes glitch-it {
+  0% {
+     transform: translate(0);
+  }
+  20% {
+     transform: translate(-2px, 2px);
+  }
+  40% {
+     transform: translate(-2px, -2px);
+  }
+  60% {
+     transform: translate(2px, 2px);
+  }
+  80% {
+     transform: translate(2px, -2px);
+  }
+  to {
+     transform: translate(0);
+  }
+}
+
+.hero_title {
+  transition: ease-in-out .4s;
+  
+}
+
+.hero_title:hover {
+  text-shadow: 2px -5px 60px #fff;
+  transition: ease-in-out .4s;
+  cursor: text;
+}
+
+
+
+/* Loading Page*/
+
+.loading-slide {
+  position: relative;
+  width: 24%;
+  margin: 0 auto;
+}
+.loading-slide .slide {
+  position: absolute;
+  width: 25%;
+  height: 5px;
+  background: #7079FE;
+  animation: slide 2.3s infinite;
+}
+.loading-slide .slide:nth-of-type(0n+1) {
+  opacity: 0.2;
+  transform: scale(1.8, 1);
+  animation-delay: 0.2s;
+}
+.loading-slide .slide:nth-of-type(0n+2) {
+  opacity: 0.4;
+  transform: scale(1.4, 1);
+  animation-delay: 0.1s;
+}
+.loading-slide .slide:nth-of-type(0n+3) {
+  opacity: 0.8;
+}
+
+
+@keyframes slide {
+  0%, 100% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+  }
+}
