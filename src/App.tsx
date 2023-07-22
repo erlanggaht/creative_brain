@@ -12,6 +12,10 @@ function App() {
     if(document.readyState === 'interactive') {
       setLoading(true)
     }
+    var x = window.matchMedia("(max-width: 640px)")
+    if(x.matches) {
+       setLoading(true);setTimeout(() => setLoading(false),3000)
+    }
     return () => {
       window.onload = function () {
         setLoading(false)
