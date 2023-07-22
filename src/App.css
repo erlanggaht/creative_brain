@@ -139,6 +139,7 @@
   position: relative;
   width: 24%;
   margin: 0 auto;
+  z-index: 99999;
 }
 .loading-slide .slide {
   position: absolute;
@@ -146,6 +147,7 @@
   height: 5px;
   background: #7079FE;
   animation: slide 2.3s infinite;
+  top:330px;
 }
 .loading-slide .slide:nth-of-type(0n+1) {
   opacity: 0.2;
