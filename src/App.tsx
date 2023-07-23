@@ -23,6 +23,7 @@ function App() {
     }
     return () => {
       window.onload = function () {
+        console.log('loading done')
         setLoading(false)
       }
     }
