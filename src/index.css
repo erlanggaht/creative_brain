@@ -16,7 +16,6 @@ body {
   background-color: #090915;
   color: #fff;
   overflow-x: hidden;
-  overscroll-behavior-x: none;
 }
 
 [data-testid="flowbite-navbar-toggle"]  {

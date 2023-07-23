@@ -47,7 +47,7 @@ function App() {
     <>
     
     {loading && <Loading_Page/> }
-    <div id="mouse"></div>
+    <div id="mouse" className='hidden md:inline'></div>
     <div  className={`app app_shadow realtive ${loading ? 'hidden transition-all' : 'inline transition-all'  }
     before:absolute before:h-0 md:before:h-96 before:w-64 before:bg-white before:-left-64 before:top-0 `} data-tilt>
 
