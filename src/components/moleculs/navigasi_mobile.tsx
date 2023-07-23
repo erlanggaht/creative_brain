@@ -2,7 +2,6 @@
 
 import { Avatar, Dropdown, Navbar } from 'flowbite-react';
 import { style_hover } from '@/utility/gradient_color';
-import { useState } from 'react';
 
 const {text_gradient} = style_hover()
 
