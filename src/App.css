@@ -131,6 +131,11 @@
   cursor: text;
 }
 
+#in_brain_link:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 20px 2px #fff;
+}
+
 
 
 /* Loading Page*/
