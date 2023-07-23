@@ -23,9 +23,9 @@ function App() {
     }
     return () => {
       window.onload = function () {
-        console.log('loading done')
         setLoading(false)
       }
+      if(document.readyState === 'complete') setLoading(false) 
     }
   },[]);
   
