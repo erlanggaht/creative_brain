@@ -3,11 +3,11 @@ export default function Absolute_Brain() {
     return (
         <>
 
-            <div className="absolute -top-[55px] left-[135px] p-1 text-gray-300">Fullstack</div>
-            <div className="absolute top-5 left-0 p-1 -translate-x-3 -rotate-45 text-gray-300">Javascript</div>
-            <div className="absolute top-36 left-0 p-1 -translate-x-[52px] md:-translate-x-[65px] -rotate-90 text-gray-300">Framework</div>
-            <div className="absolute top-36 right-0 p-1 translate-x-[40px] md:translate-x-[95px] -rotate-90 text-gray-300">Logical</div>
-            <div className="absolute top-5 right-0 p-1 translate-x-4 md:translate-x-9 rotate-45 text-gray-300">Python</div>
+            <div className="absolute top-36 left-0 p-1 -translate-x-[52px] md:-translate-x-[65px] -rotate-90 text-gray-300 group-hover:text-ungu drop-shadow" style={{transitionDelay:'.3s',transition:"ease-out .1s "}}>Framework</div>
+            <div className="absolute top-5 left-0 p-1 -translate-x-3 -rotate-45 text-gray-300 group-hover:text-ping drop-shadow" style={{transitionDelay:'.6s',transition:"ease-out .2s "}}>Javascript</div>
+            <div className="absolute -top-[55px] left-[135px] p-1 text-gray-300 group-hover:text-ungu drop-shadow" style={{transitionDelay:'.9s',transition:"ease-out .3s "}}>Fullstack</div>
+            <div className="absolute top-5 right-0 p-1 translate-x-4 md:translate-x-9 rotate-45 text-gray-300 group-hover:text-ping drop-shadow" style={{transitionDelay:'1.1s',transition:"ease-out .4s "}}>Python</div>
+            <div className="absolute top-36 right-0 p-1 translate-x-[40px] md:translate-x-[95px] -rotate-90 text-gray-300 group-hover:text-ungu drop-shadow" style={{transitionDelay:'1.3s',transition:"ease-out .5s "}}>Logical</div>
 
         </>
     )

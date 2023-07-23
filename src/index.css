@@ -15,6 +15,8 @@ body {
   margin: 0;
   background-color: #090915;
   color: #fff;
+  overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 [data-testid="flowbite-navbar-toggle"]  {
@@ -63,4 +65,17 @@ body {
 
 *::-webkit-scrollbar-thumb:active {
   background-color: #f86f7f; transition: ease-in-out .5s;
+}
+
+#mouse {
+  width: 3em;
+  height: 3em;
+  background-color: rgba(255,255,255,0.1);
+  position: absolute;
+  border: solid 2px #7079FE;
+  box-shadow: 0 0 250px 30px #7079FE;
+  transform: translate(95%, 145%);
+  border-radius: 50%;
+  transition: 0.1s ease-out;
+  position: fixed;;
 }

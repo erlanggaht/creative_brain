@@ -2,6 +2,7 @@
 
 import { Avatar, Dropdown, Navbar } from 'flowbite-react';
 import { style_hover } from '@/utility/gradient_color';
+import { useState } from 'react';
 
 const {text_gradient} = style_hover()
 
@@ -25,7 +26,7 @@ export default function Navigasi_Mobile() {
     >
       <Navbar.Brand href="#">
       <div className="glitch-wrapper">
-      <div className="text-[30px] text-ping" data-text="Erlangga" onMouseEnter={(e) => glitch(e)} onMouseLeave={(e) => glitch(e)} tabIndex={-1}>Erlan<span className='text-white'>gga</span></div>
+      <div className="text-[30px] text-ping" data-text="Erlanggaht" onMouseEnter={(e) => glitch(e)} onMouseLeave={(e) => glitch(e)} tabIndex={-1}>Brain<span className='text-white'>./Me</span></div>
       </div>
       </Navbar.Brand>
       <div className="flex md:order-2">
