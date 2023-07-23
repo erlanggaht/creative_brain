@@ -22,9 +22,11 @@ function App() {
       setLoading(true);setTimeout(() => setLoading(false),3000)
     }
 
-    window.onload = function () {
-      setLoading(false)
-    }
+      window.onload = function () {
+        setLoading(false)
+      }
+
+    
     return () => {
       window.onload = function () {
         setLoading(false)
@@ -37,7 +39,7 @@ function App() {
     Follow_Cursor()
     setTimeout(() => {
       AOS.init({ })
-    },100)
+    },1000)
   },[])
   
   
