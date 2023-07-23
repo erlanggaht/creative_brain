@@ -51,7 +51,7 @@ function App() {
     <div  className={`app app_shadow realtive ${loading ? 'hidden transition-all' : 'inline transition-all'  }
     before:absolute before:h-0 md:before:h-96 before:w-64 before:bg-white before:-left-64 before:top-0 `} data-tilt>
 
-<section data-aos="zoom-out" data-aos-duration='2500' data-aos-delay="1000" >
+<section data-aos="zoom-in-left" data-aos-duration='3000' data-aos-delay="3000" >
       <Navigasi_Mobile/>
   </section>
 

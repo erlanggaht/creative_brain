@@ -5,17 +5,46 @@ import hero_brain from '@/assets/hero_brain.png'
 import Tilt from 'react-parallax-tilt'
 import Absolute_Brain, { InBrain } from "../moleculs/absolute_brain";
 import Line from '@/assets/line.tsx'
+import { useEffect, useState } from "react";
 // Gradient Color
 const {hover_text_gradient,hover_button_gradient} = style_hover()
 
 export default function Hero() {
+  const [loading_show,setLoading_show] = useState(false)
+
+
+  useEffect(() => {
+    setLoading_show(true)
+    setTimeout(() => {
+    setLoading_show(false)
+    },3000)
+  },[])
+
 
   return (
-    <section className="flex flex-col-reverse md:flex-row md:items-center ">
-
-    {/* Left */}
-
-    <div className="flex-grow-0 md:w-7/12" data-aos="zoom-out-left" data-aos-duration='2000' data-aos-delay="1000" data-aos-once={true}>
+    <>
+   
+    <section className="flex flex-col-reverse md:flex-row md:items-center  ">
+    {loading_show ?
+    <section className="flex-grow-0 md:w-7/12  flex md:justify-center " data-aos="fade-right" data-aos-easing="ease-in-back" data-aos-duration='1000' >
+    <div className="spinner-box">
+    <div className="solar-system">
+    <div className="earth-orbit orbit">
+      <div className="planet earth"></div>
+      <div className="venus-orbit orbit">
+        <div className="planet venus"></div>
+        <div className="mercury-orbit orbit">
+          <div className="planet mercury"></div>
+          <div className="sun"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section> :
+<>
+      {/* Left */}
+    <div className="flex-grow-0 md:w-7/12"  data-aos="fade-left" data-aos-duration='3000'>
         <Button_Gradient props={{text:'Trust By Erlanggaht'}}/>
         <h1 className="hero_title font-extrabold text-6xl md:text-7xl md:py-3 pt-9">More Than just A  
           <span className="text-transparent  bg-clip-text bg-gradient-to-r from-ping to-ungu"> Creative </span> 
@@ -27,7 +56,8 @@ export default function Hero() {
           <Button_Default props={{text:"Projects",icon:true,className:`bg-transparent enabled:hover:bg-transparent ${hover_text_gradient}`, link:'https://erlanggaht.vercel.app/projects'}}/>
         </div>
 
-    </div>
+    </div> </>
+    }
 
     {/* Right */}
 
@@ -55,7 +85,7 @@ export default function Hero() {
    <div className="hero_shadow"></div>
     </div>
     </section>
-
+    </>
     
   )
 }
