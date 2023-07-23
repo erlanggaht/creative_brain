@@ -21,11 +21,14 @@ function App() {
     if(x.matches) {
       setLoading(true);setTimeout(() => setLoading(false),3000)
     }
+
+    window.onload = function () {
+      setLoading(false)
+    }
     return () => {
       window.onload = function () {
         setLoading(false)
       }
-      if(document.readyState === 'complete') setLoading(false) 
     }
   },[]);
   
