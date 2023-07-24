@@ -8,7 +8,9 @@ import AOS from 'aos'
 import 'aos/dist/aos.css';
 import Follow_Cursor from '@/utility/follow_cursor'
 import Git_Erlangga from '@/MAIN-CONTENT/moleculs/git_erlangga'
+import Card1 from '@/MAIN-CONTENT/template/card1'
 import Tilt from 'react-parallax-tilt'
+import Terminal from './MAIN-CONTENT/moleculs/terminal'
 
 function App() {
   const [loading,setLoading] = useState(false)
@@ -71,25 +73,27 @@ function App() {
       </header>
 
       {/* MAIN CONTENT */}
-      <main>
+      <main className='mt-16'>
 
          <section className='h-full relative
           before:h-full before:w-1 before:bg-gradient-to-t   before:from-transparent before:via-ping before:to-transparent before:block before:absolute md:px-4'>
               <Git_Erlangga/>
         </section>
 
-        <section className='my-6 ' >
-          <Tilt glareEnable={true} glareColor="#f86f7f" glarePosition='right' glareMaxOpacity={0.3} transitionSpeed={5000} tiltMaxAngleX={5} tiltMaxAngleY={5} glareBorderRadius='0'>
-          <div className='bg-[#171717] shadow p-16 rounded-xl 
-          mouse-cursor-gradient-tracking' style={{border:'solid 2px #2e343b'}}>
-            <p className='text-gray-500 text-3xl'><span className='text-white'>Brain./Me </span>is a website used to store personal projects. it is made with reactjs typescript technology with tailwindcss styling.
-            Want to see the source code for this website?</p>
-            <p className='text-right mt-12'>
-            <a href='https://github.com/erlanggaht' className='link_border text-white text-xl md:text-3xl hover:text-white relative' >See Repository</a>
-            </p>
+        <section className='my-20 lg:mt-6 ' >
+          <Tilt  glareMaxOpacity={0.1} transitionSpeed={5000} tiltMaxAngleX={4} tiltMaxAngleY={4} >
+          <div className='bg-[#171717] shadow lg:p-16 p-6 rounded-xl 
+          mouse-cursor-gradient-tracking flex flex-col-reverse lg:flex-row lg:gap-20  gap-16' style={{border:'solid 2px #2e343b'}}>
+          <Card1/>
+          <div className='flex-grow '>
+          <Terminal/>
+          <p className='text-center mt-6 relative cursor-copy text-md font-thin'>Clone Repo</p>
+          </div>
           </div>
           </Tilt>
         </section>
+
+        {/* Lanjut */}
 
 
       </main>

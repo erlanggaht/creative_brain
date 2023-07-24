@@ -1,4 +1,3 @@
-'use client';
 
 import { Avatar, Dropdown, Navbar } from 'flowbite-react';
 import { style_hover } from '@/utility/gradient_color';
