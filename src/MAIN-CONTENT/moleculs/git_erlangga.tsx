@@ -26,7 +26,7 @@ export default function Git_Erlangga() {
           <span className="pl-2"><br/>a source of pride. I have mastered many frameworks, and the ones with the most experience in them are <span className="uppercase font-bold italic">react, vue, next, nuxt </span> as javascript framework libraries.</span>
           <p className="px-9 py-6">for the css style library I have a lot of experience with <span className="font-bold italic uppercase">Tailwinds, Scss, DaisyUI, Bootstrap.</span> does not limit the framework or library requested by the company or client.</p>
 
-            Was once a fullstack developer at a gadget company to manage databases and create optimized and responsive website pages. <span className="opacity-60 text-sm cursor-pointer hover:opacity-40" onClick={() => setReadMore_h({ style: 'h-[76px]', boolean: false })}> Read Less &laquo; </span>
+            Was once a fullstack developer at a gadget company to manage databases and create optimized and responsive website pages. <span className="opacity-60 text-sm cursor-pointer hover:opacity-40" onClick={() => setReadMore_h({ style: 'h-[103px]', boolean: false })}> Read Less &laquo; </span>
             
         </p>
         <p className='text-right mt-12'>
