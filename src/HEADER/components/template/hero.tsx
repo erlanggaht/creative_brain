@@ -1,11 +1,12 @@
-import Button_Gradient  from "@/components/atoms/button_popover";
-import Button_Default from "@/components/atoms/button_default";
+import Button_Gradient  from "@/HEADER/components/atoms/button_popover";
+import Button_Default from "@/HEADER/components/atoms/button_default";
 import { style_hover } from "@/utility/gradient_color";
 import hero_brain from '@/assets/hero_brain.png'
 import Tilt from 'react-parallax-tilt'
-import Absolute_Brain, { InBrain } from "../moleculs/absolute_brain";
+import Absolute_Brain, { InBrain } from "@/HEADER/components/moleculs/absolute_brain";
 import Line from '@/assets/line.tsx'
 import { useEffect, useState } from "react";
+import Venus_Anim from "@/HEADER/components/moleculs/venus_anim";
 // Gradient Color
 const {hover_text_gradient,hover_button_gradient} = style_hover()
 
@@ -14,42 +15,45 @@ export default function Hero() {
 
 
   useEffect(() => {
-    setLoading_show(true)
+    if(document.readyState === 'interactive') {
+      setLoading_show(true)
+    }
     setTimeout(() => {
     setLoading_show(false)
     },3000)
+
+    var x = window.matchMedia("(max-width: 640px)")
+    if(x.matches) {
+      setLoading_show(true);setTimeout(() => setLoading_show(false),3000)
+    }
+
+      window.onload = function () {
+        setLoading_show(false)
+      }
+    return () => {
+      window.onload = function () {
+        setLoading_show(false)
+      }
+    }
   },[])
 
 
   return (
     <>
    
-    <section className="flex flex-col-reverse md:flex-row md:items-center  ">
+    <section className="flex flex-col-reverse md:flex-row md:items-center my-10 md:px-4   ">
     {loading_show ?
-    <section className="flex-grow-0 md:w-7/12  flex md:justify-center " data-aos="fade-right" data-aos-easing="ease-in-back" data-aos-duration='1000' >
-    <div className="spinner-box">
-    <div className="solar-system">
-    <div className="earth-orbit orbit">
-      <div className="planet earth"></div>
-      <div className="venus-orbit orbit">
-        <div className="planet venus"></div>
-        <div className="mercury-orbit orbit">
-          <div className="planet mercury"></div>
-          <div className="sun"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section> :
+    <section className="flex-grow-0 md:w-7/12 w-full justify-center  flex md:justify-center " data-aos="fade-right" data-aos-easing="ease-in-back" data-aos-duration='1000' >
+      <Venus_Anim/>
+    </section> :
 <>
       {/* Left */}
-    <div className="flex-grow-0 md:w-7/12"  data-aos="fade-left" data-aos-duration='3000'>
+    <div className="flex-grow-0 md:w-7/12"  data-aos="fade-left" data-aos-duration='3000' data-aos-once={true} > 
         <Button_Gradient props={{text:'Trust By Erlanggaht'}}/>
-        <h1 className="hero_title font-extrabold text-6xl md:text-7xl md:py-3 pt-9">More Than just A  
+        <h1 className="hero_title font-extrabold text-6xl md:7xl md:py-3 pt-9">More Than Just A  
           <span className="text-transparent  bg-clip-text bg-gradient-to-r from-ping to-ungu"> Creative </span> 
-         Agency</h1>
-        <p className="font-[200] py-12 w-8/12 opacity-80 hover:opacity-100 transition-color hover:transition-color">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem quaerat culpa voluptate molestias optio suscipit porro. Quis earum dolorum aut.</p>
+         Project</h1>
+        <p className="font-[200] py-12 w-8/12 opacity-80 hover:opacity-100 transition-color hover:transition-color">Welcome to the web project storage erlangga hidayatullah. if you want to edit, publish or git fork my project, feel free. and if you want to ask questions about my project, contact or DM Instagram.</p>
         
         <div className="flex gap-2">
           <Button_Default props={{text:"Let's Talk",icon:false,className:`bg-white text-dasar font-[700] ${hover_button_gradient}`,link:""}}/>

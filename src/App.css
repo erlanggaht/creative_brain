@@ -94,7 +94,7 @@
 }
 
 .app_shadow:before{
-  box-shadow :-56px 92px 1100px 50px  #666 ;  transform-style: preserve-3d;
+  box-shadow :-56px 92px 1100px 20px  #666 ;  
   background-color: transparent !important;
   z-index: -9999;
   opacity: 0.8;
@@ -242,3 +242,57 @@
 	border-radius: 50%;
 }
 
+/* Main */
+
+
+.link_border:before {
+  transition: ease-in-out  .3s,;
+  width: 0px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: transparent;
+  border-bottom: 2px solid #fff;
+  display: block;
+  content: "";
+}
+.link_border:hover:before {
+  transition: ease-in-out  .3s,;
+  width: 100%;
+}
+
+
+/* Mousemove Bg */
+.mouse-cursor-gradient-tracking {
+  position: relative;
+  background: #7983ff;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+}
+
+.mouse-cursor-gradient-tracking span {
+  position: relative;
+}
+
+.mouse-cursor-gradient-tracking::before {
+  --size: 0;
+  content: '';
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  width: var(--size);
+  height: var(--size);
+  background: radial-gradient(circle closest-side, pink, transparent);
+  transform: translate(-50%, -50%);
+  transition: width 0.2s ease, height 0.2s ease;
+}
+
+.mouse-cursor-gradient-tracking:hover::before {
+  --size: 200px;
+}
