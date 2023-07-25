@@ -14,7 +14,7 @@ export default function Terminal() {
             
             {/* Mobile */}
             <p className="hidden md:block cursor-pointer hover:opacity-75">Problem (0) </p>
-            <p className="flex gap-6 items-center lg:hidden cursor-pointer hover:opacity-75">Terminal<p className="text-2xl md:hidden pb-2">...</p> </p>
+            <div className="flex gap-6 items-center lg:hidden cursor-pointer hover:opacity-75">Terminal<p className="text-2xl md:hidden pb-2">...</p> </div>
             {/* Mobile */}
 
             <p className="hidden lg:block cursor-pointer hover:opacity-75">Terminal</p>
