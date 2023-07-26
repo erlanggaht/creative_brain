@@ -49,7 +49,7 @@ export default function Hero() {
 <>
       {/* Left */}
     <div className="flex-grow-0 md:w-7/12"  data-aos="fade-left" data-aos-duration='3000' data-aos-once={true} data-aos-offset={-10} > 
-        <Button_Gradient props={{text:'Trust By Erlanggaht'}}/>
+        <Button_Gradient props={{text:'Trust By Erlanggaht',classN:""}}/>
         <h1 className="hero_title font-extrabold text-6xl md:7xl md:py-3 pt-9">More Than Just A  
           <span className="text-transparent  bg-clip-text bg-gradient-to-r from-ping to-ungu"> Creative </span> 
          Project</h1>

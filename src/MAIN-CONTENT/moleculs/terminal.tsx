@@ -7,7 +7,7 @@ export default function Terminal() {
 
   return (
     <>
-         <div className='bg-[#060606] border-t-2 border-t-[#2e343b] pt-1 px-3 lg:p-3 mt-5 sm:mt-0 relative flex-grow rounded-xl shadow-xl lg:h-[300px] h-[320px] overflow-auto overflow-x-hidden hover:bg-[#151515] transition-all hover:transition-all ease-out w-full'>
+         <div  className='bg-[#060606] border-t-2 border-t-[#2e343b] pt-1 px-3 lg:p-3 mt-5 sm:mt-0 relative flex-grow rounded-xl shadow-xl overflow-x-hidden hover:bg-[#151515] transition-all hover:transition-all ease-out w-full'>
           
           <div className='flex justify-between items-center'>
             <div className='flex items-center gap-4 text-sm font-thin lg:font-normal text-gray-400 '>
@@ -33,7 +33,7 @@ export default function Terminal() {
 
           <div className='flex flex-col-reverse lg:flex-row justify-between mt-5 '>
           
-          <div className="text-sm font-[400] w-full  mt-12 lg:mt-0 pr-2">
+          <div className="text-sm font-[400] w-full  mt-12 lg:mt-0 pr-2 lg:h-[300px] h-[320px] overflow-y-auto" >
           { switchTerminal ?   <Writer_Terminal2/> : <Writer_Terminal1/>
         }
           </div> 
@@ -49,9 +49,9 @@ export default function Terminal() {
 
 
 function Writer_Terminal2 () {
-  return <Writer_Terminal props={{text_string:"<p>Microsoft Windows [Version xx.x.xxxxx.1933] <p> (c) Microsoft Corporation. All rights reserved. </p> <p>root :\ toor\ code\project\ reactjs \ brain_creative> </p> <br/> </p><p>mkdir creative_brain</p></p><p style=''>git clone https://github.com/erlanggaht/creative_brain.git</p> <p>cd creative_brain</p> <br/> <p>code .</p> <p>npm install</p> <p>npm run dev</p> <br/> <p style='padding-left:16px'> &gt;  web_3d@0.0.0 dev </p> <p style='padding-left:16px'> vite . </p> <br/> </p> <br><span style='color:white'>VITE</span> v4.4.4  ready in 698 ms</br> <p><span style='color:gray'>➜</span>  Local:   http://localhost:5173/ </p> <p> <span style='color:gray'>➜</span>  Network: use --host to expose </p> <p> <span style='color:gray'>➜</span>  press h to show help </p> </br> Happy Hacking .. ", cursor:'|',delay:40,pause : 9700}} />
+  return <Writer_Terminal props={{text_string:"<p data-aos='zoom-in' data-aos-delay='700'>Microsoft Windows [Version xx.x.xxxxx.1933] <p> (c) Microsoft Corporation. All rights reserved. </p> <p>root :\ toor\ code\project\ reactjs \ brain_creative> </p> <br/> </p><p data-aos='fade-down'>mkdir creative_brain</p></p><p style=''>git clone https://github.com/erlanggaht/creative_brain.git</p> <p>cd creative_brain</p> <br/> <p>code .</p> <p>npm install</p> <p>npm run dev</p> <br/> <p style='padding-left:16px'> &gt;  web_3d@0.0.0 dev </p> <p data-aos='fade-down style='padding-left:16px'> vite . </p> <br/> </p> <br><span style='color:white'>VITE</span> v4.4.4  ready in 698 ms</br> <p><span style='color:gray'>➜</span>  Local:   http://localhost:5173/ </p> <p> <span style='color:gray'>➜</span>  Network: use --host to expose </p> <p> <span style='color:gray'>➜</span>  press h to show help </p> </br> Happy Hacking .. ", cursor:'|',delay:40,pause : 5000}} />
 }
 
 function Writer_Terminal1 () {
-  return <Writer_Terminal props={{text_string:"<p>mkdir creative_brain</p></p><p style=''>gh repo clone erlanggaht/creative_brain</p> <p>cd creative_brain</p> <p>npm install</p> <p>npm run dev</p> <br/> <p style='padding-left:16px'> &gt;  web_3d@0.0.0 dev </p> <p style='padding-left:16px'> vite . </p> <br/> </p> <br><span style='color:yellow'>VITE</span> v4.4.4  ready in 698 ms</br> <p><span style='color:yellow'>➜</span>  Local:   http://localhost:5173/ </p> <p> <span style='color:yellow'>➜</span>  Network: use --host to expose </p> <p> <span style='color:yellow'>➜</span>  press h to show help </p> </br> Happy Hacking .. ", cursor:'|',delay:40,pause : 9700}} />
+  return <Writer_Terminal props={{text_string:"<p data-aos='fade-down'>mkdir creative_brain</p></p><p style=''>gh repo clone erlanggaht/creative_brain</p> <p>cd creative_brain</p> <p>npm install</p> <p>npm run dev</p> <br/> <p style='padding-left:16px' data-aos='zoom-in'> &gt;  web_3d@0.0.0 dev </p> <p style='padding-left:16px'> vite . </p> <br/> </p> <br><p data-aos='fade-right'><span style='color:yellow'>VITE</span> v4.4.4  ready in 698 ms</p></br> <p><span style='color:yellow'>➜</span>  Local:   http://localhost:5173/ </p> <p> <span data-aos='fade-down' style='color:yellow'>➜</span>  Network: use --host to expose </p> <p> <span style='color:yellow'>➜</span>  press h to show help </p> </br> Happy Hacking .. ", cursor:'|',delay:40,pause : 5000}} />
 }

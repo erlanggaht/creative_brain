@@ -4,13 +4,14 @@ export default function Card2() {
 
   return (
     <div className="w-full relative bg-gradient-to-r from-dasar to-[#171717] shadow  rounded-xl 
-     overflow-hidden group h-[860px] md:h-[930px]" style={{ border: 'solid 2px #2e343b' }} >
+     overflow-hidden group h-[860px] md:h-[930px]
+     before:h-full before:w-1 before:bg-gradient-to-t   before:from-transparent before:via-ping before:to-transparent before:block before:absolute before:z-50
+     " style={{ border: 'solid 2px #2e343b' }} >
 
     <section className='p-6 lg:p-16'>
-      <p className='text-gray-500 text-2xl sm:text-3xl font-thin'><a href="#" className='text-white'>Brain./Me </a>is a website used to store personal projects. it is made with reactjs typescript technology with tailwindcss styling.
-        Want to see the source code for this website?</p>
+      <p className='text-gray-500 text-2xl sm:text-3xl font-thin'><a href="#" className='text-white'>./Erlanggaht93 </a>is a website portfolio which can be said to be the first version of a web-type portfolio that was created. made with reactjs with dark and light themes</p>
       <p className='text-left mt-10 pr-2'>
-        <a href='https://github.com/erlanggaht' className='link_border text-white text-xl md:text-2xl hover:text-white relative drop-shadow' >See Repository</a>
+        <a href='https://github.com/erlanggaht' className='link_border text-white text-xl md:text-2xl hover:text-white relative drop-shadow' >View Portofolio</a>
       </p>
       </section>
     

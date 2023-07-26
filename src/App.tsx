@@ -14,7 +14,11 @@ import Terminal from '@/MAIN-CONTENT/moleculs/terminal'
 import copy_clone from '@/utility/copy_clone'
 import Card2 from '@/MAIN-CONTENT/template/card2'
 import Card3 from '@/MAIN-CONTENT/template/card3'
-import mouse_move_bg from './utility/mouse_move_bg'
+import mouse_move_bg from '@/utility/mouse_move_bg'
+import Line_Gradient from '@/MAIN-CONTENT/atoms/line'
+import project_icon from '@/assets/projects_icon.svg'
+import resep_asik from '@/assets/resep_asik.png'
+import Button_Gradient from './HEADER/components/atoms/button_popover'
 
 function App() {
   const [loading,setLoading] = useState(false)
@@ -45,7 +49,8 @@ function App() {
   useEffect(()=>{
     Follow_Cursor()
     setTimeout(() => {
-      AOS.init()
+      window.addEventListener('load', AOS.refresh)
+      AOS.init({})
     },1000)
 
    mouse_move_bg()
@@ -69,19 +74,26 @@ function App() {
       </header>
 
       {/* MAIN CONTENT */}
-      <main className='mt-16 mb-16'>
+      <main className='mt-16 mb-16' >
 
-         <section className='h-full relative
-          before:h-full before:w-1 before:bg-gradient-to-t   before:from-transparent before:via-ping before:to-transparent before:block before:absolute md:px-4'>
+         <section  className='h-full relative
+          before:h-full before:w-1 before:bg-gradient-to-t   before:from-transparent before:via-ping before:to-transparent before:block before:absolute md:px-4' >
               <Git_Erlangga/>
         </section>
 
-        <section className='mt-20 mb-6 lg:mt-6 ' >
+        <section className='mt-20 mb-6 lg:mb-16 lg:mt-6 relative
+
+        before:h-[67px] before:w-1 before:bg-gradient-to-t   before:from-transparent before:via-ping before:to-transparent  before:absolute before:-z-50 before:left-32 before:-bottom-16 before:lg:block before:hidden 
+
+        after:h-[67px] after:w-1 after:bg-gradient-to-t   after:from-transparent after:via-ungu after:to-transparent  after:absolute after:-z-50 after:right-32 after:-bottom-16 after:lg:block after:hidden 
+        ' >
           <Tilt  glareMaxOpacity={0.1} transitionSpeed={5000} tiltMaxAngleX={4} tiltMaxAngleY={4} >
           <div className='bg-[#171717] shadow lg:p-16 p-6 rounded-xl 
-          mouse-cursor-gradient-tracking flex flex-col-reverse lg:flex-row lg:gap-20  gap-16' style={{border:'solid 2px #2e343b'}}>
+          mouse-cursor-gradient-tracking flex flex-col-reverse lg:flex-row lg:gap-20  gap-16
+          ' style={{border:'solid 2px #2e343b'}}>
+            
           <Card1/>
-          <div className='flex-grow '>
+          <div className='flex-grow  ' data-aos="flip-left" data-aos-duration={1000}>
           <Terminal/>
           <p className='text-center mt-6 relative  text-md font-thin'><span className='cursor-copy hover:opacity-50' 
           onClick={() => copy_clone('git clone https://github.com/erlanggaht/creative_brain.git')}>Clone Repo</span></p>
@@ -90,11 +102,44 @@ function App() {
           </Tilt>
         </section>
 
-        <section className='flex flex-col lg:flex-row gap-6'>
-        <Card2/>
-        <Card3/>
-        </section>
+        
 
+        <section className='flex flex-col lg:flex-row gap-6 relative z-50
+        '>
+        <Tilt glareEnable={true} glareColor='#333' glarePosition='all' glareMaxOpacity={0.1} transitionSpeed={5000} tiltMaxAngleX={2} tiltMaxAngleY={2} >
+        <Card2/>
+        </Tilt>
+        <Tilt  glareEnable={true} glareColor='#333' glarePosition='all' glareMaxOpacity={0.1} transitionSpeed={5000} tiltMaxAngleX={2} tiltMaxAngleY={2} >
+        <Card3/>
+        </Tilt>
+        </section>
+        
+        <section className='Projects relative h-full md:mt-12'>
+        <Line_Gradient props={{via:"before:via-ungu",positionY:"",positionX:"before:right-0",}} />
+        <div className='lg:p-16 p-6'>
+        <img src={project_icon} alt='project_icon' width={43} height={43} className='md:absolute md:-right-3 bg-transparent px-1 py-4 rounded drop-shadow-[0px_1px_30px_#7079FE]'/>
+      
+          <h1 className='text-2xl text-right items-center py-4'>.all<span className='text-transparent  bg-clip-text bg-gradient-to-r from-ungu to-ping'>_projects</span> </h1>
+
+          <div className='Projects_card mt-12 mx-12'>
+            
+            <div className='card_project1 flex justify-between group'>
+              <div className='card_main w-96'>
+                <h2 className='text-5xl'>Resep Asik</h2>
+                <p className='py-3 text-gray-500'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore voluptates perspiciatis autem?</p>
+              </div>
+              <div className='flex-grow-1 flex flex-col md:opacity-90 group-hover:opacity-100  transition-transform hover:transition-transform '>
+                <img src={resep_asik} alt='resep_asik' className='shadow-[0_0_12px_1px_#7079FE]    ' width={525} height={525} />
+                <Button_Gradient props={{text:'Detail',classN:'rounded-none shadow-[0_0_12px_1px_#7079FE] '}}/>
+              </div>
+            </div>
+            <div className='flex items-center gap-3'>
+            Clone
+            </div>
+          </div>
+        
+        </div>
+        </section>
 
       </main>
 

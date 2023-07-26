@@ -2,21 +2,25 @@ import { useState } from "react"
 
 export default function Git_Erlangga() {
   const [readMore_h, setReadMore_h] = useState({
-    style: 'h-[103px] md:h-[83px]',
+    style: 'max-h-[85px] md:max-h-[83px]',
     boolean: false
   }); // @ts-ignore 
   const { style, boolean } = readMore_h;
 
   return (
     <>
-      <div className='px-6 md:px-12 md:py-32 relative'>
+      <div className='px-6 md:px-12 md:py-32 relative'  >
       
       {/* <div id='starss'></div>
       <div id='starss2'></div>
       <div id='starss3'></div> */}
 
 
-        <span className='inline-block rounded-xl p-1 px-3 border border-ping shadow'>hello my name</span>
+        <div className="flex ">
+        <p className="hover:bg-gray-200 hover:cursor-text hover:border-transparent hover:text-ping flex items-center gap-2 rounded py-2 px-3 hover:transition-all transition border border-ping shadow-sm">
+        <img src="https://erlanggaht93.vercel.app/assets/ghost-halloween-horror-svgrepo-com-74d2419c.svg" alt="logo_erlangga" height={32} width={32} />
+        <span className='leading-4' data-aos='fade-left'>hello world! <br/><span className="inline-block text-gray-400 text-sm">my name ...</span> </span></p></div>
+        <div   data-aos="fade-in" data-aos-easing="ease-in" data-aos-delay="500">
         <h1 className='text-5xl md:text-6xl text-ping font-bold py-2 '>Erlangga Hidayatullah</h1>
         <div className={`md:w-[360px] ${style} overflow-hidden px-1 pt-2`}>Being a Sofware Enginer having more than 1 year of experience in one of the world's gadget industries is
           {!boolean && <span className="opacity-60 text-sm cursor-pointer hover:opacity-40" onClick={() => setReadMore_h({ style: 'h-full md:w-[640px] leading-7', boolean: true })}>... Read More &raquo; </span>}
@@ -32,6 +36,7 @@ export default function Git_Erlangga() {
         <p className='text-right mt-12'>
           <a href='https://github.com/erlanggaht' className='link_border text-white text-xl md:text-3xl hover:text-white relative drop-shadow' >Check My Github</a>
         </p>
+        </div>
       </div>
     </>
   )
