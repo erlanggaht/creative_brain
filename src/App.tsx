@@ -19,6 +19,7 @@ import Line_Gradient from '@/MAIN-CONTENT/atoms/line'
 import project_icon from '@/assets/projects_icon.svg'
 import resep_asik from '@/assets/resep_asik.png'
 import Button_Gradient from './HEADER/components/atoms/button_popover'
+import Modal_Button from './MAIN-CONTENT/moleculs/modal'
 
 function App() {
   const [loading,setLoading] = useState(false)
@@ -127,14 +128,16 @@ function App() {
               <div className='card_main w-96'>
                 <h2 className='text-5xl'>Resep Asik</h2>
                 <p className='py-3 text-gray-500'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore voluptates perspiciatis autem?</p>
+                <div className='flex items-center gap-3 mt-36'>
+                <Modal_Button/>
+                <p><a href='' className='text-white '>Clone &#9672;</a></p>
+                </div>
               </div>
               <div className='flex-grow-1 flex flex-col md:opacity-90 group-hover:opacity-100  transition-transform hover:transition-transform '>
                 <img src={resep_asik} alt='resep_asik' className='shadow-[0_0_12px_1px_#7079FE]    ' width={525} height={525} />
-                <Button_Gradient props={{text:'Detail',classN:'rounded-none shadow-[0_0_12px_1px_#7079FE] '}}/>
+                <Button_Gradient props={{text:'Visit',classN:'rounded-none shadow-[0_0_12px_1px_#7079FE] '}}/>
+
               </div>
-            </div>
-            <div className='flex items-center gap-3'>
-            Clone
             </div>
           </div>
         
