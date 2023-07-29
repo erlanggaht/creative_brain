@@ -2,7 +2,7 @@ import { useState } from "react"
 
 export default function Git_Erlangga() {
   const [readMore_h, setReadMore_h] = useState({
-    style: 'max-h-[85px] md:max-h-[83px]',
+    style: 'max-h-[105px] md:max-h-[83px]',
     boolean: false
   }); // @ts-ignore 
   const { style, boolean } = readMore_h;

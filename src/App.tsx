@@ -17,14 +17,20 @@ import Card3 from '@/MAIN-CONTENT/template/card3'
 import mouse_move_bg from '@/utility/mouse_move_bg'
 import Line_Gradient from '@/MAIN-CONTENT/atoms/line'
 import project_icon from '@/assets/projects_icon.svg'
-import resep_asik from '@/assets/resep_asik.png'
-import Button_Gradient from './HEADER/components/atoms/button_popover'
-import Modal_Button from './MAIN-CONTENT/moleculs/modal'
+import Card_Project from './MAIN-CONTENT/template/card_project'
+import projects_fav from './utility/projects_fav'
+import { HiOutlineArrowRight } from 'react-icons/hi';
+
 
 function App() {
   const [loading,setLoading] = useState(false)
+  const [projectsFav,setProjectsFav] = useState([])
 
+  // Projects_Fav
+  useEffect(() => {
+    setProjectsFav(projects_fav())
 
+  },[])
   // Loading
   useEffect(() => {
     if(document.readyState === 'interactive') {
@@ -117,32 +123,35 @@ function App() {
         
         <section className='Projects relative h-full md:mt-12'>
         <Line_Gradient props={{via:"before:via-ungu",positionY:"",positionX:"before:right-0",}} />
-        <div className='lg:p-16 p-6'>
+        <div className='lg:py-16 lg:px-6 p-6 pl-0'>
         <img src={project_icon} alt='project_icon' width={43} height={43} className='md:absolute md:-right-3 bg-transparent px-1 py-4 rounded drop-shadow-[0px_1px_30px_#7079FE]'/>
       
-          <h1 className='text-2xl text-right items-center py-4'>.all<span className='text-transparent  bg-clip-text bg-gradient-to-r from-ungu to-ping'>_projects</span> </h1>
+          <h1 className='text-2xl text-right items-center py-4 px-5 lg:px-4 mb-20'>.all<span className='text-transparent  bg-clip-text bg-gradient-to-r from-ungu to-ping'>_projects</span> </h1>
 
-          <div className='Projects_card mt-12 mx-12'>
+          <div className='Projects_card lg:mx-12'>
             
-            <div className='card_project1 flex justify-between group'>
-              <div className='card_main w-96'>
-                <h2 className='text-5xl'>Resep Asik</h2>
-                <p className='py-3 text-gray-500'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore voluptates perspiciatis autem?</p>
-                <div className='flex items-center gap-3 mt-36'>
-                <Modal_Button/>
-                <p><a href='' className='text-white '>Clone &#9672;</a></p>
-                </div>
-              </div>
-              <div className='flex-grow-1 flex flex-col md:opacity-90 group-hover:opacity-100  transition-transform hover:transition-transform '>
-                <img src={resep_asik} alt='resep_asik' className='shadow-[0_0_12px_1px_#7079FE]    ' width={525} height={525} />
-                <Button_Gradient props={{text:'Visit',classN:'rounded-none shadow-[0_0_12px_1px_#7079FE] '}}/>
-
-              </div>
-            </div>
+            {projectsFav && projectsFav.map ((m : any,i) =>  {
+              return <Card_Project 
+              key={i}
+              props={{
+                 image : m.image,
+                 link : m.link,
+                 title : m.title,
+                 desc : m.desc,
+                 project_detail : m.project_detail,
+                 clone :  m.clone
+               }}
+             />
+            })}
+            
           </div>
-        
+
+            <p className='text-right px-6 py-4 ' data-aos='zoom-out' data-aos-once={true}><a href='https://erlanggaht.vercel.app/projects' target={'_blank'} className='group  text-white text-2xl hover:text-white   items-center transition-all  hover:transition-all' > See All Projects  <HiOutlineArrowRight className=" w-0 group-hover:h-5 group-hover:w-5 transition-all inline" /></a></p> 
+          
         </div>
         </section>
+
+        
 
       </main>
 

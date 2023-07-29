@@ -5,7 +5,15 @@ import { Button, Modal } from 'flowbite-react';
 import {useState} from 'react'
 import Tack_Stack from './tack_stack';
 
-export default function Modal_Button() {
+
+interface Modal_Button {
+  props_modal : {
+    project_detail : Array<String>
+  }
+}
+
+export default function Modal_Button({props_modal} : Modal_Button) {
+  const {project_detail} =  props_modal
   const [openModal, setOpenModal] = useState<string | undefined>();
   const props = { openModal, setOpenModal };
 
@@ -16,15 +24,12 @@ export default function Modal_Button() {
         <Modal.Header>Detail Project</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
-           <Tack_Stack stack={['VueJs','Vuex','Tailwinds']}
+           <Tack_Stack stack={project_detail} 
             />
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={() => props.setOpenModal(undefined)} color='dark' >I accept</Button>
-          <Button color="gray" onClick={() => props.setOpenModal(undefined)}>
-            Decline
-          </Button>
+          <Button onClick={() => props.setOpenModal(undefined)} color='light' >Close</Button>
         </Modal.Footer>
       </Modal>
     </>

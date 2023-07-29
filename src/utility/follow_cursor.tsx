@@ -1,6 +1,6 @@
 
 export default function Follow_Cursor() {
-  console.log('cursor')
+  console.log('hello world :)')
     let myDiv : any = document.getElementById("mouse");
     //Detect touch device
     function isTouchDevice() {
