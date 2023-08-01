@@ -7,7 +7,8 @@ export default function Terminal() {
 
   return (
     <>
-         <div  className='bg-[#060606] border-t-2 border-t-[#2e343b] pt-1 px-3 lg:p-3 mt-5 sm:mt-0 relative flex-grow rounded-xl shadow-xl overflow-x-hidden hover:bg-[#151515] transition-all hover:transition-all ease-out w-full'>
+         <div  className={`${!switchTerminal ? 'bg-[#060606] hover:bg-[#151515]' : "bg-[rgb(1,36,86)] hover:bg-[rgb(1,36,96)]"} 
+          border-t-2 border-t-[#2e343b] pt-1 px-3 lg:p-3 mt-5 sm:mt-0 relative flex-grow rounded-xl shadow-xl overflow-x-hidden transition-all hover:transition-all ease-out w-full`}>
           
           <div className='flex justify-between items-center'>
             <div className='flex items-center gap-4 text-sm font-thin lg:font-normal text-gray-400 '>
@@ -39,7 +40,7 @@ export default function Terminal() {
           </div> 
           <div className='border-l border-l-[#2e343b] px-4 sm:pr-5 text-sm flex flex-col gap-2 '>
             <p className={`flex items-center gap-1 ${!switchTerminal && 'bg-[#2e343b] transition-colors'} p-1 cursor-pointer hover:opacity-75 pr-2 `} onClick={() => setSwitchTerminal (false)}><span>&#x21f2;</span> bash</p>
-            <p className={`flex items-center gap-1 ${switchTerminal && 'bg-[#2e343b] transition-colors'} p-1 cursor-pointer hover:opacity-75 pr-2`} onClick={() => setSwitchTerminal (true)}><span>&#x21f2;</span> cmd</p>
+            <p className={`flex items-center gap-1 ${switchTerminal && 'bg-[#2e343b] transition-colors'} p-1 cursor-pointer hover:opacity-75 pr-2`} onClick={() => setSwitchTerminal (true)}><span>&#x21f2;</span> powershell</p>
           </div>
           </div> 
         </div>
@@ -49,7 +50,7 @@ export default function Terminal() {
 
 
 function Writer_Terminal2 () {
-  return <Writer_Terminal props={{text_string:"<p data-aos='zoom-in' data-aos-delay='700'>Microsoft Windows [Version xx.x.xxxxx.1933] <p> (c) Microsoft Corporation. All rights reserved. </p> <p>root :\ toor\ code\project\ reactjs \ brain_creative> </p> <br/> </p><p data-aos='fade-down'>mkdir creative_brain</p></p><p style=''>git clone https://github.com/erlanggaht/creative_brain.git</p> <p>cd creative_brain</p> <br/> <p>code .</p> <p>npm install</p> <p>npm run dev</p> <br/> <p style='padding-left:16px'> &gt;  web_3d@0.0.0 dev </p> <p data-aos='fade-down style='padding-left:16px'> vite . </p> <br/> </p> <br><span style='color:white'>VITE</span> v4.4.4  ready in 698 ms</br> <p><span style='color:gray'>➜</span>  Local:   http://localhost:5173/ </p> <p> <span style='color:gray'>➜</span>  Network: use --host to expose </p> <p> <span style='color:gray'>➜</span>  press h to show help </p> </br> Happy Hacking .. ", cursor:'|',delay:40,pause : 5000}} />
+  return <Writer_Terminal props={{text_string:"<p data-aos='zoom-in' data-aos-delay='700'>Windows PowerShell <p> Copyright (C) Microsoft Corporation. All rights reserved. <br/> <br/>Try the new cross-platform PowerShell https://aka.ms/pscore6 <br/><br/><p>root :\ toor\ code\project\ reactjs \ brain_creative> </p> <br/> </p><p data-aos='fade-down'>mkdir creative_brain</p></p><p style=''>git clone https://github.com/erlanggaht/creative_brain.git</p> <p>cd creative_brain</p> <br/> <p>code .</p> <p>npm install</p> <p>npm run dev</p> <br/> <p style='padding-left:16px'> &gt;  web_3d@0.0.0 dev </p> <p data-aos='fade-down style='padding-left:16px'> vite . </p> <br/> </p> <br><span style='color:white'>VITE</span> v4.4.4  ready in 698 ms</br> <p><span style='color:gray'>➜</span>  Local:   http://localhost:5173/ </p> <p> <span style='color:gray'>➜</span>  Network: use --host to expose </p> <p> <span style='color:gray'>➜</span>  press h to show help </p> </br> Happy Hacking .. ", cursor:'|',delay:40,pause : 5000}} />
 }
 
 function Writer_Terminal1 () {

@@ -3,12 +3,12 @@
 import { Card } from 'flowbite-react';
 
 interface Tack_Stack {
-  stack : Array<String>,
-  
+  stack : Array<Object>,
 }
 
 
 export default function Tack_Stack({stack} : Tack_Stack) {
+
   return (
     <Card>
       <h5 className="mb-3 text-base font-semibold text-gray-900 dark:text-white lg:text-xl">
@@ -20,14 +20,18 @@ export default function Tack_Stack({stack} : Tack_Stack) {
         </span>
       </p>
       <ul className="my-4 space-y-3">
-        {stack && stack.map((m,i) : any => {
-         return <li className='group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500' key={i}>
-            <span className="ml-3 flex-1 whitespace-nowrap">
-              {m}
-            </span>
-        </li>  
-       
-        })}
+
+            {/* @ts-ignore */}
+            {stack && stack.map((m,i) : any => {
+              
+             return <li className='group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500' key={i}>
+                <div className="ml-3 flex-1 whitespace-nowrap flex items-center gap-2">
+                              {/* @ts-ignore */}
+                <img src={m.split('  ')[1]} alt='icon' width={24} height={24} /> {m.split('  ')[0]}
+                </div>
+            </li>  
+
+      })}
       </ul>
       <div>
         <a

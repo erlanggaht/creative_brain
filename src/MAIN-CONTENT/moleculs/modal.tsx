@@ -8,19 +8,18 @@ import Tack_Stack from './tack_stack';
 
 interface Modal_Button {
   props_modal : {
-    project_detail : Array<String>
+    project_detail : Array<Object>,
   }
 }
 
 export default function Modal_Button({props_modal} : Modal_Button) {
   const {project_detail} =  props_modal
   const [openModal, setOpenModal] = useState<string | undefined>();
-  const props = { openModal, setOpenModal };
 
   return (
     <>
-      <div  onClick={() => props.setOpenModal('default')}><Button_Gradient props={{text:'Project Detail',classN:'rounded '}} /></div>
-      <Modal show={props.openModal === 'default'} onClose={() => props.setOpenModal(undefined)}>
+      <div  onClick={() => setOpenModal('default')}><Button_Gradient props={{text:'Project Detail',classN:'rounded '}} /></div>
+      <Modal show={openModal === 'default'} onClose={() => setOpenModal(undefined)}>
         <Modal.Header>Detail Project</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">
@@ -29,7 +28,7 @@ export default function Modal_Button({props_modal} : Modal_Button) {
           </div>
         </Modal.Body>
         <Modal.Footer>
-          <Button onClick={() => props.setOpenModal(undefined)} color='light' >Close</Button>
+          <Button onClick={() => setOpenModal(undefined)} color='light' >Close</Button>
         </Modal.Footer>
       </Modal>
     </>

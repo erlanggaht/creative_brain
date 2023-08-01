@@ -37,7 +37,16 @@ body {
   color: #7079FE ;
 }
 
+[data-testid="timeline-point"] > div{
+background-color: #f86f7f !important;
+}
 
+[data-testid="timeline-point"] > span{
+  background-color: #f86f7f !important;
+}
+[data-testid="timeline-point"] > span > svg{
+  color: white !important;
+}
 /* Scroll  
 /* Firefox */
 * {
