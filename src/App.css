@@ -4,6 +4,7 @@
   padding:  0rem 2rem;
   font-family: 'DM Sans', sans-serif;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 
@@ -20,6 +21,7 @@
   z-index: -99;
   border-radius: 100%;
 }
+
 
 .hero_shadow:hover {
   box-shadow :16px 32px 900px  red; 

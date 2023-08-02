@@ -39,7 +39,7 @@ export default function Content_Main() {
           <Tilt  glareMaxOpacity={0.1} transitionSpeed={5000} tiltMaxAngleX={4} tiltMaxAngleY={4} >
           <div className='bg-[#171717] shadow lg:p-16 p-6 rounded-xl 
           mouse-cursor-gradient-tracking flex flex-col-reverse lg:flex-row lg:gap-20  gap-16
-          ' style={{border:'solid 2px #2e343b'}}>
+          ' style={{border:'solid 2px #2e343b'}} id="project">
             
           <Card1/>
           <div className='flex-grow  ' data-aos="flip-left" data-aos-duration={1000}>

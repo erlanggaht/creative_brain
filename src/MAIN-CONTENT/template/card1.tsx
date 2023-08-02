@@ -1,7 +1,7 @@
 
 export default function Card1() {
   return (
-    <div className="lg:w-2/5 w-full relative" >
+    <div className="lg:w-2/5 w-full relative"  >
           
             <p className='text-gray-500 text-2xl sm:text-3xl font-thin'><a href="#" className='text-white'>Brain./Me </a>is a website used to store personal projects. it is made with reactjs typescript technology with tailwindcss styling.
             Want to see the source code for this website?</p>

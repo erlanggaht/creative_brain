@@ -19,7 +19,7 @@ export default function Navigasi_Mobile() {
     <Navbar
       fluid
       rounded
-      className='bg-transprent '
+      className='bg-transprent'
 
     >
       <Navbar.Brand href="#">
@@ -30,7 +30,7 @@ export default function Navigasi_Mobile() {
       <div className="flex md:order-2">
         <Dropdown
           inline
-          label={<Avatar alt="User settings" img="https://res.cloudinary.com/djsizjaee/image/upload/f_auto,q_auto/v1/sinarasih/galeri/kzbh5qbwofe7hbeftsvo" rounded/>}
+          label={<Avatar alt="User settings" img="https://res.cloudinary.com/djsizjaee/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1690981554/qjau8vdofmufxojclprq.jpg" rounded/>}
         >
           <Dropdown.Header className='z-[999]'>
             <span className="block text-sm">

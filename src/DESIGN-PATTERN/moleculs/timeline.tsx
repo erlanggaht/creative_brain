@@ -7,50 +7,86 @@ import { HiHashtag } from 'react-icons/hi';
 export default function VerticalTimeline() {
   return (
     <Timeline horizontal>
-    <Timeline.Item>
-      <Timeline.Point icon={HiHashtag} />
+    <Timeline.Item data-aos="fade-right" data-aos-duration={1000} data-aos-delay={500}>
+      <Timeline.Point icon={HiHashtag} className='md:inline hidden' />
       <Timeline.Content>
-        <Timeline.Title className='text-ping mt-7 [data-testid="timeline-point"]'>
-          Flowbite Library v1.0.0
+        <Timeline.Title className='text-ping mt-12 [data-testid="timeline-point"]'>
+          Atoms
         </Timeline.Title>
-        <Timeline.Time>
-          Released on December 2, 2021
+        <Timeline.Time  className='text-white'>
+        smallest component        
         </Timeline.Time>
         <Timeline.Body>
-          Get started with dozens of web components and interactive elements.
+        basic HTML elements like form labels, inputs, buttons, and others
         </Timeline.Body>
       </Timeline.Content>
     </Timeline.Item>
-    <Timeline.Item>
-      <Timeline.Point icon={HiHashtag} />
+    <Timeline.Item data-aos="fade-right" data-aos-duration={1000} data-aos-delay={1000}>
+      <Timeline.Point icon={HiHashtag} className='md:inline hidden' />
       <Timeline.Content>
-        <Timeline.Title className='text-ping mt-7 [data-testid="timeline-point"]'>
-          Flowbite Library v1.2.0
+        <Timeline.Title className='text-ping mt-12 [data-testid="timeline-point"]'>
+          Moleculs
         </Timeline.Title>
-        <Timeline.Time>
-          Released on December 23, 2021
-        </Timeline.Time>
+        <Timeline.Time  className='text-white'>
+        component atoms that are combined
+          </Timeline.Time>
         <Timeline.Body>
-          Get started with dozens of web components and interactive elements.
+         molecules are relatively simple groups of UI elements functioning together as a unit.
         </Timeline.Body>
       </Timeline.Content>
     </Timeline.Item>
-    <Timeline.Item>
-      <Timeline.Point icon={HiHashtag} />
+    <Timeline.Item data-aos="fade-right" data-aos-duration={1000} data-aos-delay={1500}>
+      <Timeline.Point icon={HiHashtag} className='md:inline hidden' />
       <Timeline.Content>
-        <Timeline.Title className='text-ping mt-7 '>
-          Flowbite Library v1.3.0
+        <Timeline.Title className='text-ping mt-12 '>
+          Organism
         </Timeline.Title>
-        <Timeline.Time>
-          Released on January 5, 2022
+        <Timeline.Time  className='text-white'>
+          atomic and molecule components that are combined
         </Timeline.Time>
         <Timeline.Body>
-          Get started with dozens of web components and interactive elements.
+        Organisms are relatively complex UI components composed of groups of molecules and/or atoms and/or other organisms.         
+        </Timeline.Body>
+      </Timeline.Content>
+    </Timeline.Item>
+
+  
+  </Timeline>
+  )
+}
+
+export function VerticalTimeline_down() {
+  return <Timeline data-aos="fade-down" data-aos-duration={1000} data-aos-delay={2000}>
+    <Timeline.Item >
+      <Timeline.Point icon={HiHashtag} className='md:inline hidden' />
+      <Timeline.Content>
+        <Timeline.Title className='text-ping mt-12 '>
+          Templates
+        </Timeline.Title>
+        <Timeline.Time  className='text-white'>
+        combination of 3 atomic elements 
+        </Timeline.Time>
+        <Timeline.Body>
+        Templates are page-level objects that place components into a layout and articulate the design’s underlying content structure.       
+        </Timeline.Body>
+      </Timeline.Content>
+    </Timeline.Item>
+
+    <Timeline.Item>
+      <Timeline.Point icon={HiHashtag} className='md:inline hidden' />
+      <Timeline.Content>
+        <Timeline.Title className='text-ping mt-12 '>
+          Pages
+        </Timeline.Title>
+        <Timeline.Time  className='text-white'>
+        all atomic elements and already an app
+        </Timeline.Time>
+        <Timeline.Body>
+        Pages are specific instances of templates that show what a UI looks like with real representative content in place. 
         </Timeline.Body>
       </Timeline.Content>
     </Timeline.Item>
   </Timeline>
-  )
 }
 
 

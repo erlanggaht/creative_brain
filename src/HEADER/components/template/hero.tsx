@@ -57,7 +57,7 @@ export default function Hero() {
         
         <div className="flex gap-2">
           <Button_Default props={{text:"Let's Talk",icon:false,className:`bg-white text-dasar font-[700] ${hover_button_gradient}`,link:""}}/>
-          <Button_Default props={{text:"Projects",icon:true,className:`bg-transparent enabled:hover:bg-transparent ${hover_text_gradient}`, link:'https://erlanggaht.vercel.app/projects'}}/>
+          <Button_Default props={{text:"Projects",icon:true,className:`bg-transparent enabled:hover:bg-transparent ${hover_text_gradient}`, link:'#project'}}/>
         </div>
 
     </div> </>

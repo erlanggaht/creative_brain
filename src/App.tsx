@@ -9,10 +9,8 @@ import 'aos/dist/aos.css';
 import Follow_Cursor from '@/utility/follow_cursor'
 import mouse_move_bg from '@/utility/mouse_move_bg'
 import Content_Main from '@/MAIN-CONTENT/template/content_main'
-import VerticalTimeline from './DESIGN-PATTERN/moleculs/timeline'
-import Tilt from 'react-parallax-tilt'
-import atomic from '@/assets/atomic.png'
-import { HiOutlineArrowRight } from 'react-icons/hi';
+import Design_Pattern from './DESIGN-PATTERN/template/design_pattern'
+
 
 function App() {
   const [loading, setLoading] = useState(false)
@@ -74,33 +72,7 @@ function App() {
 
         {/*  */}
         <main className='design_pattern my-12 md:my-32'>
-        <h1 className='md:text-center text-6xl font-bold tracking-tight'>This website design pattern</h1>
-        <p className='md:text-center md:max-w-[1000px] break-keep md:mx-auto text-lg text-gray-400 my-6'><span className='text-ping'>Atomic Design</span> is a design methodology that takes inspiration from how an atomic element forms more complex molecules to form an organism. Every web page interface, says Frost, is actually formed from various basic components, just as atoms form complex creatures like humans. So, in applying Atomic Design, a UI designer must build the basic components first.</p>
-
-        <Tilt  glareMaxOpacity={0.1} transitionSpeed={5000} tiltMaxAngleX={4} tiltMaxAngleY={4} >
-          <section className='  shadow lg:p-20 lg:pb-32 pb-36 p-6
-            lg:gap-20  gap-16 border-2 border-ping mt-12
-          '>
-            <h4 className='text-sm text-gray-500'>brain_creative.tsx</h4>
-            <h6 className='mb-12 text-sm font-thin text-gray-500'>atomic_design</h6>
-            <div className='p-6 pb-0 lg:p-12'>
-            <VerticalTimeline/>
-            </div>
-          </section>
-        </Tilt>
-
-        <div className='relative lg:flex'>
-          <img src={atomic} alt='atomic_design' width={470} height={470} className='border-2 border-ping p-[2px] rounded-lg lg:absolute -top-16 right-6 -mt-16 mx-12'/>
-          <div className='p-6 py-28 lg:p-28 max-w-[580px]'>
-          <p className='text-gray-500 text-2xl'>
-            <span className='text-white'>Want to Learn Atomic Design </span>
-            to make your project more neat and clean.
-            <br/>
-            <br/>
-            <a href='https://atomicdesign.bradfrost.com/' target={'_blank'} className='group  text-white text-2xl hover:text-white   items-center transition-all  hover:transition-all  shadow ' > visit docs by bradfrost  <HiOutlineArrowRight className=" w-0 group-hover:h-5 group-hover:w-5 transition-all inline" /></a>
-          </p>
-          </div>
-        </div>
+            <Design_Pattern/>
         </main>
 
       </div>
