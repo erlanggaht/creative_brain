@@ -24,10 +24,10 @@ export default function Design_Pattern() {
           </section>
         </Tilt>
 
-        <div className='relative md:flex '>
-          <img src={atomic} alt='atomic_design' width={470} height={470} className='border-2 border-ping p-[2px] rounded-md absolute -top-32 -right-20 md:right-12  mx-auto atomic_image_shadow' data-aos={'fade-zoom'} data-aos-delay={1500} data-aos-once={true}/>
-          <div className='p-6 py-28 lg:p-28 max-w-[580px]'>
-          <p className='text-gray-500 text-2xl mt-60 lg:mt-2'>
+        <div className='relative md:flex md:flex-row-reverse '>
+          <img src={atomic} alt='atomic_design' width={470} height={470} className='border-2 border-ping p-[0px]   hidden md:inline  mx-auto atomic_image_shadow border-t-[#222] ' data-aos={'fade-zoom'} data-aos-delay={1500} data-aos-once={true}/>
+          <div className='p-0 py-0 md:p-12 xl:py-28 max-w-[580px]'>
+          <p className='text-gray-500 text-2xl mt-12 xl:mt-2'>
             <span className='text-white'>Want to Learn Atomic Design </span>
             to make your project more neat and clean.
             <br/>

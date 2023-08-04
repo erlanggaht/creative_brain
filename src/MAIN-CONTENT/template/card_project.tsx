@@ -21,7 +21,7 @@ export default function Card_Project({ props }: Card_Project) {
     <>
       <div className='card_project1 flex flex-col md:flex-row gap-5 md:justify-between group'>
         <div className='card_main md:w-96'>
-          <h2 className='text-4xl lg:text-5xl w-80 sm:w-full tracking-tighter'>{title}</h2>
+          <h2 className='text-4xl lg:text-5xl w-80 sm:w-fulf tracking-normal'>{title}</h2>
           <p className='py-3 text-gray-500'>{desc}</p>
           <div className='flex justify-between items-center gap-3 mt-6 md:mt-36'>
 

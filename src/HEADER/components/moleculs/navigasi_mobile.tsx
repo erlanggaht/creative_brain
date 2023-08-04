@@ -30,7 +30,8 @@ export default function Navigasi_Mobile() {
       <div className="flex md:order-2">
         <Dropdown
           inline
-          label={<Avatar alt="User settings" img="https://res.cloudinary.com/djsizjaee/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1690981554/qjau8vdofmufxojclprq.jpg" rounded/>}
+          label={<Avatar alt="User settings" img="https://res.cloudinary.com/djsizjaee/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1690981554/qjau8vdofmufxojclprq.jpg" rounded className='hover:opacity-80'/>}
+          
         >
           <Dropdown.Header className='z-[999]'>
             <span className="block text-sm">
@@ -73,13 +74,13 @@ export default function Navigasi_Mobile() {
             Home
           </p>
         </Navbar.Link>
-        <Navbar.Link href="https://erlanggaht.vercel.app" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu'>
+        <Navbar.Link href="https://erlanggaht.vercel.app" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu '>
           LinkBio
         </Navbar.Link>
-        <Navbar.Link href="https://instagram.com/erlanggaht93" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu'>
+        <Navbar.Link href="https://instagram.com/erlanggaht93" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu '>
           Instagram
         </Navbar.Link>
-        <Navbar.Link href="#" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu'>
+        <Navbar.Link href="#" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu '>
           Contact
         </Navbar.Link>
       </Navbar.Collapse>

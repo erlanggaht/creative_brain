@@ -7,7 +7,7 @@ import { HiHashtag } from 'react-icons/hi';
 export default function VerticalTimeline() {
   return (
     <Timeline horizontal>
-    <Timeline.Item data-aos="fade-right" data-aos-duration={1000} data-aos-delay={500}>
+    <Timeline.Item data-aos="fade-right" data-aos-duration={600} data-aos-delay={500}>
       <Timeline.Point icon={HiHashtag} className='md:inline hidden' />
       <Timeline.Content>
         <Timeline.Title className='text-ping mt-12 [data-testid="timeline-point"]'>
@@ -21,7 +21,7 @@ export default function VerticalTimeline() {
         </Timeline.Body>
       </Timeline.Content>
     </Timeline.Item>
-    <Timeline.Item data-aos="fade-right" data-aos-duration={1000} data-aos-delay={1000}>
+    <Timeline.Item data-aos="fade-right" data-aos-duration={1000} data-aos-delay={900}>
       <Timeline.Point icon={HiHashtag} className='md:inline hidden' />
       <Timeline.Content>
         <Timeline.Title className='text-ping mt-12 [data-testid="timeline-point"]'>
@@ -35,7 +35,7 @@ export default function VerticalTimeline() {
         </Timeline.Body>
       </Timeline.Content>
     </Timeline.Item>
-    <Timeline.Item data-aos="fade-right" data-aos-duration={1000} data-aos-delay={1500}>
+    <Timeline.Item data-aos="fade-right" data-aos-duration={1000} data-aos-delay={1100}>
       <Timeline.Point icon={HiHashtag} className='md:inline hidden' />
       <Timeline.Content>
         <Timeline.Title className='text-ping mt-12 '>
@@ -56,7 +56,7 @@ export default function VerticalTimeline() {
 }
 
 export function VerticalTimeline_down() {
-  return <Timeline data-aos="fade-down" data-aos-duration={1000} data-aos-delay={2000}>
+  return <Timeline data-aos="fade-down" data-aos-duration={1000} data-aos-delay={1250}>
     <Timeline.Item >
       <Timeline.Point icon={HiHashtag} className='md:inline hidden' />
       <Timeline.Content>
