@@ -1,4 +1,3 @@
-'use client';
 
 import Button_Gradient from '@/HEADER/components/atoms/button_popover';
 import { Button, Modal } from 'flowbite-react';

@@ -21,7 +21,7 @@ export default function Card_Project({ props }: Card_Project) {
     <>
       <div className='card_project1 flex flex-col md:flex-row gap-5 md:justify-between group'>
         <div className='card_main md:w-96'>
-          <h2 className='text-4xl lg:text-5xl w-80 sm:w-fulf tracking-normal'>{title}</h2>
+          <h2 className='text-4xl lg:text-5xl  sm:w-full tracking-normal'>{title}</h2>
           <p className='py-3 text-gray-500'>{desc}</p>
           <div className='flex justify-between items-center gap-3 mt-6 md:mt-36'>
 
@@ -30,7 +30,7 @@ export default function Card_Project({ props }: Card_Project) {
               <p onClick={() => copy_clone('git clone ' + clone)} className='cursor-pointer hover:text-ungu active:text-gray-500'>Clone &#9672;</p>
             </div>
             <a href={clone} target={'_blank'}  data-aos="zoom-in" data-aos-once={true}><picture className='hover:cursor-pointer' >
-              <source srcSet="https://erlanggaht.vercel.app/static/25df963aa00abf53615958ba7c39b899/dbc4a/github.webp" /><img decoding="async" loading="lazy" alt="githubIcon" src="https://erlanggaht.vercel.app/static/25df963aa00abf53615958ba7c39b899/dbc4a/github.webp" srcSet="https://erlanggaht.vercel.app/static/25df963aa00abf53615958ba7c39b899/dbc4a/github.webp 25w,https://erlanggaht.vercel.app/static/25df963aa00abf53615958ba7c39b899/dbc4a/github.webp 100w" width={42} />
+              <source srcSet="https://erlanggaht.vercel.app/static/25df963aa00abf53615958ba7c39b899/dbc4a/github.webp" /><img decoding="async" loading="lazy" alt="githubIcon" src="https://erlanggaht.vercel.app/static/25df963aa00abf53615958ba7c39b899/dbc4a/github.webp" srcSet="https://erlanggaht.vercel.app/static/25df963aa00abf53615958ba7c39b899/dbc4a/github.webp 25w,https://erlanggaht.vercel.app/static/25df963aa00abf53615958ba7c39b899/dbc4a/github.webp 100w" width={42} height={42} />
             </picture>
             </a>
           </div>

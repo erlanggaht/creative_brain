@@ -1,7 +1,7 @@
 import resep_asik from '@/assets/resep_asik.png'
 import digital_quran from '@/assets/digitial_quran.png'
 import catatan_sumbangan from '@/assets/catatan-sumbangan.png'
-import seblaks from '@/assets/seblaks.png'
+import sinar_asih from '@/assets/sinar_asih.png'
 
 
 // Icon 
@@ -14,7 +14,6 @@ import vue from '@/assets/vuejs.svg'
 import express from '@/assets/express.svg'
 import postgress from '@/assets/postgresql.svg'
 import elephantsql from '@/assets/elephtansql.svg'
-import firebase from '@/assets/firebase.svg'
 import daisyui from '@/assets/daisyui.svg'
 
 
@@ -50,11 +49,11 @@ export default function projects_fav(): any {
         },
 
         {
-            image: seblaks,
-            link: 'https://seblaks.vercel.app/',
-            title: "Seblak Food Website",
-            desc: "The spicy food website, Seblak, is made using NextJS and DaisyUI technology and auth from Firebase",
-            project_detail: ['Nextjs13  ' + nextjs, 'Tailwinds  ' + tailwind , 'Firebase DB Realtime  ' + firebase, "DaisyUI ( Library Tailwind Component )  " + daisyui],
+            image: sinar_asih,
+            link: 'https://sinarasih.vercel.app/',
+            title: "Gadgets Company Profile",
+            desc: "The gadget company profile website is created with nextJs and the server uses postgresql as the employee profile database",
+            project_detail: ['Nextjs13  ' + nextjs, 'Tailwinds  ' + tailwind , 'PostgreSQL  ' + postgress, "DaisyUI ( Library Tailwind Component )  " + daisyui],
             clone: 'https://github.com/erlanggaht/web_seblak/'
         }
     ]

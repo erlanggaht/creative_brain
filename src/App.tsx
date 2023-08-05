@@ -11,20 +11,18 @@ import mouse_move_bg from '@/utility/mouse_move_bg'
 import Content_Main from '@/MAIN-CONTENT/template/content_main'
 import Design_Pattern from '@/DESIGN-PATTERN/template/design_pattern'
 import Writer_Terminal from '@/MAIN-CONTENT/atoms/writer_terminal'
+import Main_Stack from '@/MY-EXPERTISE/template/main_stack'
+import Avatar_Erlangga from '@/DEV&SUPORT/atoms/avatar_erlangga'
+import Avatar_Suport from './DEV&SUPORT/moleculs/avatar_suport'
+import Scroll_X from './utility/scroll_x'
 
-import reactjs_logo from '@/assets/reactjs_logo.svg'
-import vuejs_logo from '@/assets/vuejs_logo.svg'
-import tailwind_logo from '@/assets/tailwindcss_logo.svg'
-import postgresql_logo from '@/assets/postgresql_logo.svg'
-import firebase_logo from '@/assets/firebase_logo.svg'
-import github_logo from '@/assets/github_logo.svg'
-import typescript_logo from '@/assets/typescript_logo.svg'
-import eslint_logo from '@/assets/eslint_logo.svg'
-import vite_logo from '@/assets/vite_logo.svg'
+
+
+
 
 function App() {
   const [loading, setLoading] = useState(false)
-
+  const [screenWindow,setScreenWindow] = useState(false)
 
   // Loading
   useEffect(() => {
@@ -61,18 +59,32 @@ function App() {
 
   // UserAgent Block
   useEffect(() => {
-      (function(agent){
-        switch(true) {
-          case agent.indexOf('firefox') > -1: console.log("Your browser : " + agent );break
-          case agent.indexOf('chrome') > -1: console.log("Your browser : " + agent );break
-            // @ts-ignore
-          case agent.indexOf("opr") > -1 && !!window.opr :  console.log("Your browser : " + agent ); break
-          case agent.indexOf("safari") > -1: console.log("Your browser : " + agent ); break
-          case agent.indexOf("edge") > -1: console.log("Your browser : " + agent ); break
-          case agent.indexOf("edg/") > -1:  console.log("Your browser : " + agent ); break
-          default: alert('sorry, this web must use the latest browser! ')
-        }
-      })(window.navigator.userAgent.toLowerCase())
+    (function (agent) {
+      switch (true) {
+        case agent.indexOf('firefox') > -1: console.log("Your browser : " + agent); break
+        case agent.indexOf('chrome') > -1: console.log("Your browser : " + agent); break
+        // @ts-ignore
+        case agent.indexOf("opr") > -1 && !!window.opr: console.log("Your browser : " + agent); break
+        case agent.indexOf("safari") > -1: console.log("Your browser : " + agent); break
+        case agent.indexOf("edge") > -1: console.log("Your browser : " + agent); break
+        case agent.indexOf("edg/") > -1: console.log("Your browser : " + agent); break
+        default: alert('sorry, this web must use the latest browser! ')
+      }
+    })(window.navigator.userAgent.toLowerCase())
+
+  }, [])
+
+  // Avatar Scroll X 
+  useEffect(() => {
+    Scroll_X()
+    const mobile_queries = window.matchMedia("(min-width:1024px)").matches // >> true | false
+    mobile_queries && setScreenWindow(true)
+    window.addEventListener('resize', function() {
+      // viewport and full window dimensions will change
+      var viewport_width = window.innerWidth;
+      if( viewport_width > 1024 ) setScreenWindow(true)
+      else setScreenWindow(false)
+    });
   },[])
 
 
@@ -86,7 +98,7 @@ function App() {
 
 
         {/* HEADER */}
-        <span className="typed-cursor typed-cursor--blink "><Writer_Terminal props={{text_string:"", cursor:'_',delay:40,pause : 5000}} /></span>
+        <span className="typed-cursor typed-cursor--blink "><Writer_Terminal props={{ text_string: "", cursor: '_', delay: 40, pause: 5000 }} /></span>
         <header className='app_shadow before:absolute before:h-0 md:before:h-96 before:w-64 before:bg-white before:-left-64 before:top-0 ' >
           <Navigasi_Mobile />
           <Hero />
@@ -98,42 +110,38 @@ function App() {
         </main>
 
         {/* DESIGN PATTERN  */}
-        <main className='design_pattern my-12 md:my-32'>
-            <Design_Pattern/>
+        <main className='design_pattern my-20 md:my-32'>
+          <Design_Pattern />
         </main>
 
         {/* MY EXPRERTISE */}
         <main className='my_expertise relative mt-20 md:mt-60
         before:h-[3px] before:w-full before:bg-ungu before:absolute before:top-0 before:bg-gradient-to-r   before:from-transparent before:via-ping to-transparent before:-rotate-6
         '>
-          
-        <h1 className='text-4xl md:text-6xl font-bold tracking-tight p-12 py-8 -rotate-6 text-white' ><span className='bg-gradient-to-tl from-ping to-ungu inline-block p-1 px-6'>My Expertise</span></h1>
+          <Main_Stack />
+        </main>
 
-        <section className='mt-20 flex flex-wrap justify-center md:justify-start md:p-12 items-center  gap-6 '>
-          <img src={reactjs_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='react_logo' 
-          data-aos="fade-up" data-aos-duration={300} data-aos-delay={300} />
-          <img src={vuejs_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='vuejs_logo'
-          data-aos-duration={300} data-aos="fade-down" data-aos-delay={500}/>
-          <img src={tailwind_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='tailwind_logo'
-          data-aos-duration={300} data-aos="fade-up" data-aos-delay={700}/>
-         <div className=' h-[90px] w-[170px] flex items-center justify-center grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' data-aos-duration={300} data-aos="fade-down" data-aos-delay={900}><p className='text-4xl text-[#00d8ff] tracking-wider pb-2  text-center'>express</p></div>
-          <img src={postgresql_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='postgresql'
-          data-aos-duration={300} data-aos="fade-up" data-aos-delay={1100}/>
-          <img src={firebase_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='firebase'
-          data-aos-duration={300} data-aos="fade-down" data-aos-delay={1300}/>
-          <img src={github_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='github'
-          data-aos-duration={300} data-aos="fade-up" data-aos-delay={1500}/>
-          <img src={typescript_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='typescript'
-          data-aos-duration={300} data-aos="fade-down" data-aos-delay={1700}/>
-          <img src={eslint_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='eslint'
-          data-aos-duration={300} data-aos="fade-up" data-aos-delay={1900}/>
-          <img src={vite_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='eslint'
-          data-aos-duration={300} data-aos="fade-down" data-aos-delay={2000}/>
+        {/* Dev */}
+        <main className='mt-32 md:mt-40'>
+          <h1 className='text-4xl md:text-5xl text-center md:text-right'>Developer Brain./Me</h1>
+
+          <section className='card_avatar avatar_erlangga mt-32 flex justify-center '>
+            <Avatar_Erlangga/>
+          </section>
+
+        <p className='mt-40 text-right'>Suport Me</p>
+        <section className='card_avatar avatar_suport flex gap-12 gap-x-8  mt-12  overflow-x-auto lg:overflow-visible lg:flex-wrap lg:justify-center snap-x ' id="scroll_container">
+            
+        {!screenWindow ? <div className='wrapper'>
+            <Avatar_Suport/>
+            </div> : <Avatar_Suport/>
+        }
         </section>
 
 
+          
 
-        </main>    
+        </main>
 
       </section>
     </>
