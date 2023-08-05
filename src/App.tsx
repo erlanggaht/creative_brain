@@ -15,8 +15,12 @@ import Writer_Terminal from '@/MAIN-CONTENT/atoms/writer_terminal'
 import reactjs_logo from '@/assets/reactjs_logo.svg'
 import vuejs_logo from '@/assets/vuejs_logo.svg'
 import tailwind_logo from '@/assets/tailwindcss_logo.svg'
-
-
+import postgresql_logo from '@/assets/postgresql_logo.svg'
+import firebase_logo from '@/assets/firebase_logo.svg'
+import github_logo from '@/assets/github_logo.svg'
+import typescript_logo from '@/assets/typescript_logo.svg'
+import eslint_logo from '@/assets/eslint_logo.svg'
+import vite_logo from '@/assets/vite_logo.svg'
 
 function App() {
   const [loading, setLoading] = useState(false)
@@ -99,17 +103,35 @@ function App() {
         </main>
 
         {/* MY EXPRERTISE */}
-        <main className='my_expertise relative mt-12 md:mt-60
+        <main className='my_expertise relative mt-20 md:mt-60
         before:h-[3px] before:w-full before:bg-ungu before:absolute before:top-0 before:bg-gradient-to-r   before:from-transparent before:via-ping to-transparent before:-rotate-6
         '>
           
-        <h1 className='text-6xl font-bold tracking-tight p-12 py-8 -rotate-6 text-white' ><span className='bg-gradient-to-tl from-ping to-ungu inline-block p-1 px-6'>My Expertise</span></h1>
+        <h1 className='text-4xl md:text-6xl font-bold tracking-tight p-12 py-8 -rotate-6 text-white' ><span className='bg-gradient-to-tl from-ping to-ungu inline-block p-1 px-6'>My Expertise</span></h1>
 
-        <section className='my-12 p-12 flex grayscale '>
-          <img src={reactjs_logo} height={32} width={200}  alt='react_logo'/>
-          <img src={vuejs_logo} height={32} width={200}  alt='react_logo'/>
-          <img src={tailwind_logo} height={32} width={200}  alt='react_logo'/>
+        <section className='mt-20 flex flex-wrap justify-center md:justify-start md:p-12 items-center  gap-6 '>
+          <img src={reactjs_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='react_logo' 
+          data-aos="fade-up" data-aos-duration={300} data-aos-delay={300} />
+          <img src={vuejs_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='vuejs_logo'
+          data-aos-duration={300} data-aos="fade-down" data-aos-delay={500}/>
+          <img src={tailwind_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='tailwind_logo'
+          data-aos-duration={300} data-aos="fade-up" data-aos-delay={700}/>
+         <div className=' h-[90px] w-[170px] flex items-center justify-center grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' data-aos-duration={300} data-aos="fade-down" data-aos-delay={900}><p className='text-4xl text-[#00d8ff] tracking-wider pb-2  text-center'>express</p></div>
+          <img src={postgresql_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='postgresql'
+          data-aos-duration={300} data-aos="fade-up" data-aos-delay={1100}/>
+          <img src={firebase_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='firebase'
+          data-aos-duration={300} data-aos="fade-down" data-aos-delay={1300}/>
+          <img src={github_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='github'
+          data-aos-duration={300} data-aos="fade-up" data-aos-delay={1500}/>
+          <img src={typescript_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='typescript'
+          data-aos-duration={300} data-aos="fade-down" data-aos-delay={1700}/>
+          <img src={eslint_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='eslint'
+          data-aos-duration={300} data-aos="fade-up" data-aos-delay={1900}/>
+          <img src={vite_logo} height={32} width={170}  className='h-[90px] w-[170px] grayscale hover:grayscale-0 hover:cursor-text transition-all hover:transition' alt='eslint'
+          data-aos-duration={300} data-aos="fade-down" data-aos-delay={2000}/>
         </section>
+
+
 
         </main>    
 
