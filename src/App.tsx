@@ -135,13 +135,13 @@ function App() {
 
 
         {/* Dev */}
-        <main className='mt-32 md:mt-40'>  
+        <main className='mt-32 md:mt-40 '>  
           <Main_Dev_Suport/>
           
         </main>
 
 
-        <footer className='mt-[840px] mb-6 p-6' data-aos='fade-in'>
+        <footer className='mt-40 md:mt-56 mb-6 p-6 px-0 md:px-6' data-aos='fade-in'>
 
           <Main_Footer/>
 

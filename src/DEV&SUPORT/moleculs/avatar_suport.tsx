@@ -8,6 +8,7 @@ import david_alfa from '@/assets/david_alfa.jpg'
 import code_kyra from '@/assets/code_kyra.jpg'
 import bang_taro from '@/assets/bang_taro.jpeg'
 import ahmad_muhyidin from '@/assets/ahmad_muhyidin.jpeg'
+import Tilt from 'react-parallax-tilt'
 
 
 
@@ -97,6 +98,7 @@ export default function Avatar_Suport() {
 
     {avatar_card.map ((m,i) => {
         return <div className='card_avatar bloc w-72 md:w-60 snap-start opacity-100 md:opacity-70 md:hover:opacity-100 transition-all hover:transition-all group' key={i} data-aos='zoom-in'>
+        <Tilt>
         <Avatar
           img={m.image}
           size="lg"
@@ -104,6 +106,7 @@ export default function Avatar_Suport() {
           alt={m.name}
           className="hover:opacity-80"
         />
+        </Tilt>
         <p className='text-center pt-5 text-xl'>{m.name}</p>
         <p className='text-center pt-2 text-sm text-[#464957] h-8 capitalize group-hover:text-ungu transition-all hover:transition-all  duration-150'>{m.desc}</p>
 

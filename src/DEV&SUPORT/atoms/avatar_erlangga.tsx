@@ -1,15 +1,17 @@
 import { Avatar } from 'flowbite-react'
+import Tilt from 'react-parallax-tilt'
 
 export default function Avatar_Erlangga() {
     return (
         <div className='card_avatar  w-72 md:w-60 snap-start opacity-100  cursor-text transition-all hover:transition-all group' data-aos='fade-in'>
-
+            <Tilt>
             <Avatar
                 img="https://res.cloudinary.com/djsizjaee/image/upload/v1690981554/qjau8vdofmufxojclprq.jpg"
                 size="xl"
                 rounded={true}
                 className='hover:opacity-90 transition-all'
             />
+            </Tilt>
             <p className='text-center pt-5 text-2xl'>Erlangga Hidayatullah</p>
             <p className='text-center pt-2 text-md text-[#464957] group-hover:text-ungu ' >Full-Stack Developer</p>
             <div className='flex justify-center gap-2 my-6'>
