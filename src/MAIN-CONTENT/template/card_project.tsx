@@ -1,7 +1,6 @@
 import copy_clone from '@/utility/copy_clone'
 import Modal_Button from '@/MAIN-CONTENT/moleculs/modal'
 import Button_Gradient from '@/HEADER/components/atoms/button_popover'
-import Tilt from 'react-parallax-tilt'
 
 interface Card_Project {
   props: {
