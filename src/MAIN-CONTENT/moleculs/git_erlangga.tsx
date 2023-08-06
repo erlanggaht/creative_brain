@@ -17,7 +17,7 @@ export default function Git_Erlangga() {
         <div className="flex my-2 ">
           <p className="hover:bg-gray-200 hover:cursor-text hover:border-transparent hover:text-ping flex items-center gap-2 rounded py-2 px-3 hover:transition-all transition border border-ping shadow-sm">
             <img src="https://erlanggaht93.vercel.app/assets/ghost-halloween-horror-svgrepo-com-74d2419c.svg" alt="logo_erlangga" height={32} width={32} />
-            <span className='leading-4' data-aos='fade-left' data-aos-once={true}>hello world! <br /><span className="inline-block text-gray-400 text-sm">my name ...</span> </span></p></div>
+            <span className='leading-4' data-aos='fade-right' data-aos-once={true}>hello world! <br /><span className="inline-block text-gray-400 text-sm">my name ...</span> </span></p></div>
         <div data-aos="fade-in" data-aos-easing="ease-in" data-aos-delay="500" data-aos-once={true}>
           <h1 className='text-5xl md:text-6xl text-ping tracking-tight font-bold py-2 '>Erlangga Hidayatullah</h1>
           <div className={`md:w-[360px] ${style} overflow-hidden px-1 pt-2`}>Being a Sofware Enginer having more than 1 year of experience in one of the world's gadget industries is

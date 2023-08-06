@@ -20,6 +20,10 @@ a {
   font-family: 'Roboto', sans-serif;
 }
 
+input,input:focus,input:active {
+  font-size: 16px;
+}
+
 .hero_shadow{
   box-shadow :16px 32px 500px  #f88396;  transform-style: preserve-3d;
   height: 220px;
