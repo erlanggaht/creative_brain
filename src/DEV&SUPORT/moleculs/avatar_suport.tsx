@@ -102,9 +102,11 @@ export default function Avatar_Suport() {
           size="lg"
           rounded={true}
           alt={m.name}
+          className="hover:opacity-80"
         />
         <p className='text-center pt-5 text-xl'>{m.name}</p>
-        <p className='text-center pt-2 text-sm text-[#464957] h-8 capitalize group-hover:text-ungu'>{m.desc}</p>
+        <p className='text-center pt-2 text-sm text-[#464957] h-8 capitalize group-hover:text-ungu transition-all hover:transition-all  duration-150'>{m.desc}</p>
+
         <div className='flex justify-center gap-2 my-6'>
         <a href={m.link_ig} className="text-white">
             <button className='py-2 text-sm disabled:cursor-not-allowed disabled:hover:bg-[#171717] disabled:hover:text-white disabled:hover:opacity-100 px-3 bg-[#171717] hover:opacity-80 rounded' disabled={m.disable}> Instgram </button>

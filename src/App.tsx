@@ -12,9 +12,9 @@ import Content_Main from '@/MAIN-CONTENT/template/content_main'
 import Design_Pattern from '@/DESIGN-PATTERN/template/design_pattern'
 import Writer_Terminal from '@/MAIN-CONTENT/atoms/writer_terminal'
 import Main_Stack from '@/MY-EXPERTISE/template/main_stack'
-import Avatar_Erlangga from '@/DEV&SUPORT/atoms/avatar_erlangga'
-import Avatar_Suport from './DEV&SUPORT/moleculs/avatar_suport'
-import Scroll_X from './utility/scroll_x'
+import Main_Dev_Suport from '@/DEV&SUPORT/template/main_dev&suport'
+import Main_Experience from './EXPERIENCE/template/main_experience'
+import Main_Footer from './FOOTER/template/main_footer'
 
 
 
@@ -22,7 +22,7 @@ import Scroll_X from './utility/scroll_x'
 
 function App() {
   const [loading, setLoading] = useState(false)
-  const [screenWindow,setScreenWindow] = useState(false)
+  
 
   // Loading
   useEffect(() => {
@@ -74,18 +74,7 @@ function App() {
 
   }, [])
 
-  // Avatar Scroll X 
-  useEffect(() => {
-    Scroll_X()
-    const mobile_queries = window.matchMedia("(min-width:1024px)").matches // >> true | false
-    mobile_queries && setScreenWindow(true)
-    window.addEventListener('resize', function() {
-      // viewport and full window dimensions will change
-      var viewport_width = window.innerWidth;
-      if( viewport_width > 1024 ) setScreenWindow(true)
-      else setScreenWindow(false)
-    });
-  },[])
+
 
 
   return (
@@ -96,6 +85,9 @@ function App() {
       <section className={`app  realtive ${loading ? 'hidden transition-all' : 'inline transition-all'}
       `} data-tilt>
 
+                                        {/* Start */}
+                                        <div className='st2 '></div>
+                                        <div className='st3 '></div>
 
         {/* HEADER */}
         <span className="typed-cursor typed-cursor--blink "><Writer_Terminal props={{ text_string: "", cursor: '_', delay: 40, pause: 5000 }} /></span>
@@ -103,14 +95,22 @@ function App() {
           <Navigasi_Mobile />
           <Hero />
         </header>
-
+        
+                                        {/* Start */}
+                                        <div className='st2 '></div>
+                                        <div className='st3 '></div>
+      
         {/* MAIN CONTENT */}
         <main className='mt-16 mb-16' >
           <Content_Main />
         </main>
 
+                                        {/* Start */}
+                                        <div className='st2 '></div>
+                                        <div className='st3 '></div>
+
         {/* DESIGN PATTERN  */}
-        <main className='design_pattern my-20 md:my-32'>
+        <main className='design_pattern my-20 md:my-3'>
           <Design_Pattern />
         </main>
 
@@ -120,28 +120,32 @@ function App() {
         '>
           <Main_Stack />
         </main>
+        
+                                      {/* Start */}
+                                      <div className='st '></div>
+                                      <div className='st2 '></div>
+                                      <div className='st3 '></div>
+        {/* Experience */}
+        <main className=' mt-32 md:mt-40'>
 
-        {/* Dev */}
-        <main className='mt-32 md:mt-40'>
-          <h1 className='text-4xl md:text-5xl text-center md:text-right'>Developer Brain./Me</h1>
-
-          <section className='card_avatar avatar_erlangga mt-32 flex justify-center '>
-            <Avatar_Erlangga/>
-          </section>
-
-        <p className='mt-40 text-right'>Suport Me</p>
-        <section className='card_avatar avatar_suport flex gap-12 gap-x-8  mt-12  overflow-x-auto lg:overflow-visible lg:flex-wrap lg:justify-center snap-x ' id="scroll_container">
-            
-        {!screenWindow ? <div className='wrapper'>
-            <Avatar_Suport/>
-            </div> : <Avatar_Suport/>
-        }
-        </section>
-
-
-          
+          <Main_Experience/>
 
         </main>
+
+
+
+        {/* Dev */}
+        <main className='mt-32 md:mt-40'>  
+          <Main_Dev_Suport/>
+          
+        </main>
+
+
+        <footer className='mt-[840px] mb-6 p-6' data-aos='fade-in'>
+
+          <Main_Footer/>
+
+        </footer>
 
       </section>
     </>

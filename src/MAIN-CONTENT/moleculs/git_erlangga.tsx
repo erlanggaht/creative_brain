@@ -11,10 +11,8 @@ export default function Git_Erlangga() {
     <>
       <div className='px-6 md:px-12 md:py-32 relative'  >
 
-        {/* <div id='starss'></div>
-      <div id='starss2'></div>
-      <div id='starss3'></div> */}
 
+    
 
         <div className="flex my-2 ">
           <p className="hover:bg-gray-200 hover:cursor-text hover:border-transparent hover:text-ping flex items-center gap-2 rounded py-2 px-3 hover:transition-all transition border border-ping shadow-sm">

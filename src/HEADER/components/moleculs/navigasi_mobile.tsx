@@ -11,8 +11,14 @@ export default function Navigasi_Mobile() {
     const dataTitle = document.querySelector('[data-text]')
     if(e.type === 'mouseenter') dataTitle?.classList.add('glitch')
     else dataTitle?.classList.remove('glitch')
+  }
 
-  
+  // Active Start
+  function ActiveStart() {
+    document.querySelectorAll('.st').forEach(m => m.classList.toggle('stars') )
+    document.querySelectorAll('.st2').forEach(m => m.classList.toggle('stars2') )
+    document.querySelectorAll('.st3').forEach(m => m.classList.toggle('stars3') )
+
   }
 
   return (
@@ -57,8 +63,8 @@ export default function Navigasi_Mobile() {
           </Dropdown.Item>
           </a>
           <Dropdown.Divider />
-          <Dropdown.Item>
-            LightMode
+          <Dropdown.Item onClick={() => ActiveStart()}>
+            Star Theme
           </Dropdown.Item>
         </Dropdown>
         <Navbar.Toggle />
