@@ -6,9 +6,9 @@ import { HiOutlineArrowRight } from 'react-icons/hi';
 export default function Design_Pattern() {
   return (
     <>
-         <h1 className='md:text-center text-5xl md:text-6xl font-bold tracking-tight'>This website design pattern</h1>
+         {/* <h1 className='md:text-center text-5xl md:text-6xl font-bold tracking-tight'>This website design pattern</h1>
         <p className='md:text-center md:max-w-[1000px] md:mx-auto text-lg text-gray-400 my-6'><span className='text-ping'>Atomic Design</span> is a design methodology that takes inspiration from how an atomic element forms more complex molecules to form an organism. Every web page interface, says Frost, is actually formed from various basic components, just as atoms form complex creatures like humans. So, in applying Atomic Design, a UI designer must build the basic components first.</p>
-
+ */}
         <Tilt  glareMaxOpacity={0.1} transitionSpeed={5000} tiltMaxAngleX={4} tiltMaxAngleY={4} >
           <section className='  shadow lg:p-20 lg:pb-32 pb-36 p-6
             lg:gap-20  gap-16 border-2 border-ping mt-12 relative
