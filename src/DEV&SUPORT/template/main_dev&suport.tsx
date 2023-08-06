@@ -44,7 +44,7 @@ export default function Main_Dev_Suport() {
             </section>
 
 
-            <p className='mt-40 text-right'>Suport Me</p>
+            <p className='mt-28 md:mt-40 text-right'>Suport Me</p>
             <section className='list-x card_avatar avatar_suport flex gap-12 gap-x-20 md:gap-12  mt-12 p-12 pt-3 px-6 md:p-2  overflow-x-auto w-full lg:overflow-visible lg:flex-wrap lg:justify-center  cursor-grab active:cursor-grabbing' id="scroll_container">
 
 

@@ -10,12 +10,13 @@ export default function Tab_Experience() {
             <Tabs.Group
                 aria-label="Default tabs"
                 style="default"
+                className=' md:flex'
             >
                 <Tabs.Item
                     active
                     icon={HiUserCircle}
                     title="Work"
-
+                    
                 >
                     <section className='mt-12 px-6'>
                         <Work_Timeline />

@@ -88,7 +88,7 @@ export default function Content_Main() {
             
           </div>
 
-            <p className='text-right px-1 py-4 '><a href='https://erlanggaht.vercel.app/projects' target={'_blank'} className='group  text-white text-2xl hover:text-white   items-center transition-all  hover:transition-all border-l-2  pl-2 border-ungu shadow ' > See All Projects  <HiOutlineArrowRight className=" w-0 group-hover:h-5 group-hover:w-5 transition-all inline" /></a></p> 
+            <p className='text-right px-1 py-4 ' data-aos='zoom-out' data-aos-once={true}><a href='https://erlanggaht.vercel.app/projects' target={'_blank'} className='group  text-white text-2xl hover:text-white   items-center transition-all  hover:transition-all border-l-2  pl-2 border-ungu shadow ' > See All Projects  <HiOutlineArrowRight className=" w-0 group-hover:h-5 group-hover:w-5 transition-all inline" /></a></p> 
           
         </div>
         </section>

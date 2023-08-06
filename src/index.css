@@ -58,13 +58,29 @@ background-color: #f86f7f !important;
 
 [role='tablist'] {
   border-bottom: solid 2px #7079FE;
+ 
 }
 
+
+@media (max-width: 768px) {
+  [role='tablist'] {
+    border-bottom: solid 2px #7079FE;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  [role='tablist'] > button {
+    /* width: 90px;
+    text-align: center; */
+    justify-content: flex-start;
+  }
+}
 
 [role='tablist'] > button:hover {
   color: white;
   background-color: #7079FE;
   transition:  ease-in-out .3s;
+  border-radius: 0px;
 }
 
 [role='tablist'] > button:focus {
@@ -72,6 +88,7 @@ background-color: #f86f7f !important;
   background-color: #7079FE;
   color: white !important;
   transition:  ease-in-out .8s;
+  border-radius: 0px;
 }
 
 [aria-selected='true'] {
