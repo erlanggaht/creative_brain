@@ -32,10 +32,10 @@ export default function Main_Footer() {
        </section>
    
    
-       <section className={'flex justify-between mt-36 mx-8 sm:mx-16 flex-wrap gap-3 pt-6 px-7  text-sm'}>
-         <p>©2023 Erlangga Hidayatullah. All Rights Reserved.</p>
+       <section className={'flex justify-between mt-20 mx-0 sm:mx-16 flex-wrap gap-3 pt-6 px-0  text-sm'}>
+         <p className="text-left">©2023 Erlangga Hidayatullah. All Rights Reserved.</p>
          <div className={'flex gap-4'}>
-           <p className={'bg-color-other-200 text-bg-base px-3'}>Thanks to <a href={'https://unplash.com'}>Flowbite.</a></p>
+           <p className={'bg-color-other-200 text-bg-base '}>Thanks to <a href={'https://unplash.com'}>Flowbite.</a></p>
            <a href={'https://erlanggaht.vercel.app/terms/'}>Terms of use</a>
            <a href={'https://erlanggaht.vercel.app/privacy_policy/'}>Pripacy Policy</a>
          </div>
