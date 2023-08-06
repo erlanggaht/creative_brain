@@ -54,7 +54,7 @@ export default function Certifacate_Timeline() {
 
                                 </p>
                                 {m.view_cert && <div className='flex justify-end mt-6'>
-                                    <a href={m.link_cert} target='_blank'><button className="p-2 px-3 bg-ungu text-white rounded-sm  flex  items-center hover:opacity-80 active:opacity-70">{m.text_button} <HiArrowNarrowRight className="ml-2 h-3 w-3" /> </button></a>
+                                    <a href={m.link_cert} target='_blank'><button className="p-2 px-3 bg-ungu text-white rounded-sm  flex  items-center hover:opacity-80 active:opacity-70 mb-12 md:mb-0">{m.text_button} <HiArrowNarrowRight className="ml-2 h-3 w-3" /> </button></a>
                                 </div>
                                 }
                             </Timeline.Body>
