@@ -48,7 +48,7 @@ export default function Hero() {
     </section> :
 <>
       {/* Left */}
-    <div className="flex-grow-0 md:w-7/12"  data-aos="fade-left" data-aos-duration='3000' data-aos-once={true} data-aos-offset={-10} > 
+    <div className="flex-grow-0 md:w-7/12"  data-aos="fade-in" data-aos-duration='3000' data-aos-once={true} data-aos-offset={-10} > 
         <Button_Gradient props={{text:'Trust By Erlanggaht',classN:""}}/>
         <h1 className="hero_title font-extrabold text-6xl md:7xl md:py-3 pt-9">More Than Just A  
           <span className="text-transparent  bg-clip-text bg-gradient-to-r from-ping to-ungu"> Creative </span> 
@@ -65,7 +65,7 @@ export default function Hero() {
 
     {/* Right */}
 
-    <div className="hero mx-auto p-2 md:w-80 md:h-80 md:mb-12 my-20 relative group" data-aos="fade-left" >
+    <div className="hero mx-auto p-2 md:w-80 md:h-80 md:mb-12 my-20 relative group" data-aos="fade-in" >
     <Line clas='absolute -top-[110px] right-[20px] z-50 hidden lg:block'/>
     {/* Absolute */}
     <section>
