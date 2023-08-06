@@ -35,15 +35,13 @@ export default function Card_Project({ props }: Card_Project) {
             </a>
           </div>
         </div>
-        <Tilt glareEnable={true} glareColor='#333' glarePosition='all' glareMaxOpacity={0.1} transitionSpeed={200} tiltMaxAngleX={3} tiltMaxAngleY={3}>
-          <div className='flex-grow-1 flex flex-col md:opacity-90 group-hover:opacity-100  transition-transform hover:transition-transform mt-12 md:mt-0  ' data-aos="fade-left" >
-
-            <img src={image} alt={title} className='shadow-[0_0_12px_1px_#7079FE] w-full md:w-[525px]   ' width={525} height={525}  />
+      
+          <div className=' flex flex-col md:opacity-90 group-hover:opacity-100  transition-transform hover:transition-transform mt-12 md:mt-0  ' data-aos="fade-in" >
+            <img src={image} alt={title} className='shadow-[0_0_12px_1px_#7079FE]  md:w-[525px]   ' width={525} height={525}  />
             <a href={link} target={'_blank'}>
               <Button_Gradient props={{ text: 'Visit', classN: 'rounded-none shadow-[0_0_12px_1px_#7079FE] w-full ' }} />
             </a>
           </div>
-        </Tilt>
 
       </div>
       <div className='h-[2px] w-full bg-gradient-to-r   from-transparent via-ungu to-transparent my-20 '></div>
