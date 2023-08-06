@@ -50,7 +50,8 @@ function App() {
     Follow_Cursor()
     setTimeout(() => {
       window.addEventListener('load', AOS.refresh)
-      AOS.init({})
+      AOS.init({
+      })
     }, 1000)
 
     mouse_move_bg()
