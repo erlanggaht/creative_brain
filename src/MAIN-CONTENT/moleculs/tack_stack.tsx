@@ -24,9 +24,9 @@ export default function Tack_Stack({stack} : Tack_Stack) {
             {stack && stack.map((m,i) : any => {
               
              return <li className='group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500' key={i}>
-                <div className=" flex-1 whitespace-nowrap flex flex-nowrap items-center gap-2">
+                <div className=" flex-1 whitespace-normal flex flex-nowrap items-center gap-2">
                               {/* @ts-ignore */}
-                <img src={m.split('  ')[1]} alt='icon' width={24} height={24} /> {m.split('  ')[0]}
+                <img src={m.split('  ')[1]} alt='icon' width={24} height={24} /> <p className=''> {m.split('  ')[0]} </p>
                 </div>
             </li>  
 

@@ -18,7 +18,7 @@ export default function Modal_Button({props_modal} : Modal_Button) {
   return (
     <>
       <div  onClick={() => setOpenModal('default')}><Button_Gradient props={{text:'Project Detail',classN:'rounded '}} /></div>
-      <Modal show={openModal === 'default'} onClose={() => setOpenModal(undefined)}>
+      <Modal show={openModal === 'default'} onClose={() => setOpenModal(undefined)} data-aos='zoom-out' data-aos-once={true}>
         <Modal.Header>Detail Project</Modal.Header>
         <Modal.Body>
           <div className="space-y-6">

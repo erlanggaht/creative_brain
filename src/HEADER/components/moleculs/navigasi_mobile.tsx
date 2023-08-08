@@ -47,7 +47,7 @@ export default function Navigasi_Mobile() {
               erlanggahidayat.md@gmail.com
             </span>
           </Dropdown.Header>
-          <a href='https://erlanggaht.vercel.app/projects'>
+          <a href='#project'>
             <Dropdown.Item>
             Projects
           </Dropdown.Item>
@@ -86,8 +86,8 @@ export default function Navigasi_Mobile() {
         <Navbar.Link href="https://instagram.com/erlanggaht93" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu '>
           Instagram
         </Navbar.Link>
-        <Navbar.Link href="#" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu '>
-          Contact
+        <Navbar.Link href="#guestbook" className='text-white hover:bg-white hover:text-ping border-[#666] md:hover:text-ungu '>
+          Guestbook
         </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>

@@ -1,4 +1,3 @@
-import { Garisfull } from "@/FOOTER/atoms/Garisfull";
 import InputFooter from "@/FOOTER/moleculs/input_footer";
 
 export default function Main_Footer() {
@@ -6,12 +5,10 @@ export default function Main_Footer() {
     <>
     <section className={'footerGrid relative'}>
        
-       <div className={' h-full absolute left-6'}>
-         <Garisfull/>
-         </div>
+      
    
        <div className={'footertop sm:flex sm:flex-row flex-col flex justify-end a gap-20  py-2 '}>
-         <div className={'aboutFooter sm:px-10 sm:text-left  text-right px-10'}>
+         <div className={'aboutFooter sm:px-10 sm:text-left  text-right px-8'}>
          <h2 className={'text-4xl font-bold uppercase'}> About</h2>
          <ul className={'mt-10 flex flex-col gap-5 font-thin text-md text-color-base-100 dark:text-bg-base'}>
            <a className={'linkfooterAbout text-white'} href={'https://erlanggaht.vercel.app'}><li>Link Bio</li></a>
@@ -32,15 +29,7 @@ export default function Main_Footer() {
        </section>
    
    
-       <section className={'flex justify-between mt-20 mx-0 sm:mx-16 flex-wrap gap-3 pt-6 px-0  text-sm'}>
-         <p className="text-left">©2023 Erlangga Hidayatullah. All Rights Reserved.</p>
-         <div className={'flex gap-4'}>
-           <p className={'bg-color-other-200 text-bg-base '}>Thanks to <a href={'https://unplash.com'}>Flowbite.</a></p>
-           <a href={'https://erlanggaht.vercel.app/terms/'}>Terms of use</a>
-           <a href={'https://erlanggaht.vercel.app/privacy_policy/'}>Pripacy Policy</a>
-         </div>
-       </section>
-
+     
     </>
   )
 }

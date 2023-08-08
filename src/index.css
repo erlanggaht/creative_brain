@@ -9,6 +9,8 @@
 html {
   height: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+
 }
 
 
@@ -30,6 +32,7 @@ body {
   height: 100%;
   position: relative;
   touch-action: pan-y;
+  scroll-behavior: smooth;
 }
 
 [data-testid="flowbite-navbar-toggle"]  {
@@ -41,9 +44,7 @@ body {
   color: #7079FE ;
 }
 
-[data-testid="timeline-point"] > div{
-background-color: #f86f7f !important;
-}
+
 
 [data-testid="timeline-point"] > span{
   background-color: #f86f7f !important;
@@ -52,9 +53,8 @@ background-color: #f86f7f !important;
   color: white !important;
 }
 
-[data-testid="timeline-point"] > div{
-  color: white !important;
-  background-color: #7079fe !important;
+#design_p_timeline [data-testid="timeline-point"] > div{
+  background-color:  #f86f7f;
 }
 
 [role='tablist'] {
@@ -82,6 +82,10 @@ background-color: #f86f7f !important;
   background-color: #7079FE;
   transition:  ease-in-out .3s;
   border-radius: 0px;
+}
+
+[data-testid="timeline-component"]:nth-child(2) {
+  border-left: solid 2px #f86f7f;
 }
 
 [role='tablist'] > button:focus {

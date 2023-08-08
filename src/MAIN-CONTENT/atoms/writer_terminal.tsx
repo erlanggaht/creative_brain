@@ -5,12 +5,13 @@ interface Writer_Terminal {
     text_string : string,
     cursor : string,
     delay : number,
-    pause : number
+    pause : number,
+    loop : boolean
   }
 }
 
 export default function Writer_Terminal({props} : Writer_Terminal ) {
-  const {text_string,cursor,delay,pause} = props
+  const {text_string,cursor,delay,pause,loop} = props
   return (
 
     <Typewriter
@@ -27,7 +28,7 @@ export default function Writer_Terminal({props} : Writer_Terminal ) {
           .start();
       }}
       options={{
-        loop : true,
+        loop : loop,
         delay : delay,
         cursor : cursor,
         deleteSpeed : 5

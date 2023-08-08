@@ -54,7 +54,7 @@ export default function projects_fav(): any {
             title: "Gadgets Company Profile",
             desc: "The gadget company profile website is created with nextJs and the server uses postgresql as the employee profile database",
             project_detail: ['Nextjs13  ' + nextjs, 'Tailwinds  ' + tailwind , 'PostgreSQL  ' + postgress, "DaisyUI ( Library Tailwind Component )  " + daisyui],
-            clone: 'https://github.com/erlanggaht/web_seblak/'
+            clone: 'https://github.com/erlanggaht/landing_SAS'
         }
     ]
 }

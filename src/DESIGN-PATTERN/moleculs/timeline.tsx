@@ -59,7 +59,7 @@ export function VerticalTimeline_down() {
   return <Timeline data-aos="fade-down" data-aos-duration={1000} data-aos-delay={1250}>
     <Timeline.Item >
       <Timeline.Point icon={HiHashtag} className='md:inline hidden' />
-      <Timeline.Content>
+      <Timeline.Content >
         <Timeline.Title className='text-ping mt-12 '>
           Templates
         </Timeline.Title>

@@ -56,7 +56,7 @@ export default function Hero() {
         <p className="font-[200] py-12 w-8/12 opacity-80 hover:opacity-100 transition-color hover:transition-color">Welcome to the web project storage erlangga hidayatullah. if you want to edit, publish or git fork my project, feel free. and if you want to ask questions about my project, contact or DM Instagram.</p>
         
         <div className="flex gap-2">
-          <Button_Default props={{text:"Let's Talk",icon:false,className:`bg-white text-dasar font-[700] ${hover_button_gradient}`,link:""}}/>
+          <Button_Default props={{text:"Let's Talk",icon:false,className:`bg-white text-dasar font-[700] ${hover_button_gradient}`,link:"https://ig.me/m/erlanggaht93"}}/>
           <Button_Default props={{text:"Projects",icon:true,className:`bg-transparent enabled:hover:bg-transparent ${hover_text_gradient}`, link:'#project'}}/>
         </div>
 
