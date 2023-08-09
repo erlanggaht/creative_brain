@@ -2,6 +2,8 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path from 'path'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+import dotenv from 'dotenv'
+dotenv.config() // load env vars from .env
 
 const DEFAULT_OPTIONS = {
   test: /\.(jpe?g|png|gif|tiff|webp|avif)$/i,
@@ -69,7 +71,9 @@ const DEFAULT_OPTIONS = {
 export default defineConfig({
   plugins: [react(),ViteImageOptimizer(DEFAULT_OPTIONS
   ),],
-
+  define: {
+    __HOST__: `"${process.env.HOST}"`,
+  },
   resolve: {
     alias: {
       // @ts-ignore

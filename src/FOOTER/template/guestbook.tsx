@@ -9,8 +9,8 @@ import axios from 'axios';
 
 
 // Endpoint
-const url_get_guestbook = `${import.meta.env.VITE_HOST}/guest_comment`
-const url_add_guestbook = `${import.meta.env.VITE_HOST}/guest_add`
+// @ts-ignore
+const url_get_guestbook = `${ __HOST__}/guest_comment`;const url_add_guestbook = `${ __HOST__}/guest_add`
 
 type User = {
 name : String,
