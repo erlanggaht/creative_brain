@@ -1,5 +1,5 @@
-import mobile from '@/assets/mobile.png'
-import tablet from '@/assets/tablet.png'
+import mobile from '@/assets/project_image/mobile.png'
+import tablet from '@/assets/project_image/tablet.png'
 
 
 export default function Card3() {

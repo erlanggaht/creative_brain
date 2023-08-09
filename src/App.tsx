@@ -1,11 +1,11 @@
 // import { useState } from 'react'
 import '@/App.css'
+import AOS from 'aos'
+import 'aos/dist/aos.css';
 import Navigasi_Mobile from '@/HEADER/components/moleculs/navigasi_mobile'
 import Hero from '@/HEADER/components/template/hero'
 import Loading_Page from '@/HEADER/components/moleculs/Loading_Page'
 import { useEffect, useState } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css';
 import Follow_Cursor from '@/utility/follow_cursor'
 import mouse_move_bg from '@/utility/mouse_move_bg'
 import Content_Main from '@/MAIN-CONTENT/template/content_main'
@@ -20,7 +20,9 @@ import Footer_Content_Bottom from '@/FOOTER/moleculs/footer_content_bottom'
 import { GlobalContext } from '@/Context/Global_Context'
 import GuestBook from '@/FOOTER/template/guestbook'
 import LineScroll from '@/utility/scroll_line'
-import button_top from '@/assets/button_top.svg'
+
+// Icon Assets
+import icon_assets from '@/assets/imported/icon_assets';const {button_top} = icon_assets
 
 
 function App() {

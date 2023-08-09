@@ -6,16 +6,21 @@ interface Button_Default {
         text : String,
         icon : Boolean,
         className : String,
-        link : string | any
+        link?: string ,
+        ActiveStar? : () => void
     }
 }
 
+function not_function() {
+  return 
+}
+
 export default function Button_Default({props} : Button_Default ) {
-    const {text,icon,className,link} = props
+    const {text,icon,className,link = "#",ActiveStar = () => not_function()} = props
     return (
     <>
       <a href={link}>
-      <Button className={className}>
+      <Button className={className} onClick={() => ActiveStar()}>
         <p>
           {text}
         </p>

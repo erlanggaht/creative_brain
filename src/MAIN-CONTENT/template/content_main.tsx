@@ -8,9 +8,11 @@ import copy_clone from '@/utility/copy_clone'
 import Card2 from '@/MAIN-CONTENT/template/card2'
 import Card3 from '@/MAIN-CONTENT/template/card3'
 import Line_Gradient from '@/MAIN-CONTENT/atoms/line'
-import project_icon from '@/assets/projects_icon.svg'
 import Card_Project from '@/MAIN-CONTENT/template/card_project'
 import { HiOutlineArrowRight } from 'react-icons/hi';
+
+import icon_assets from '@/assets/imported/icon_assets';const {project_icon} = icon_assets
+
 import projects_fav from '@/utility/projects_fav';
 
 export default function Content_Main() {

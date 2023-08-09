@@ -1,8 +1,7 @@
-
 import Button_Gradient from '@/HEADER/components/atoms/button_popover';
 import { Button, Modal } from 'flowbite-react';
 import {useState} from 'react'
-import Tack_Stack from './tack_stack';
+import Tack_Stack from '@/MAIN-CONTENT/moleculs/tack_stack';
 
 
 interface Modal_Button {

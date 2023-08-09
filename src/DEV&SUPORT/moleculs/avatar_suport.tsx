@@ -1,13 +1,13 @@
 import { Avatar } from "flowbite-react";
 
 
-import sandhika from '@/assets/sandhika.jpg'
-import eko from '@/assets/eko.jpg'
-import dea_afrizal from '@/assets/dea_afrizal.jpg'
-import david_alfa from '@/assets/david_alfa.jpg'
-import code_kyra from '@/assets/code_kyra.jpg'
-import bang_taro from '@/assets/bang_taro.jpeg'
-import ahmad_muhyidin from '@/assets/ahmad_muhyidin.jpeg'
+import sandhika from '@/assets/suport_avatar/sandhika.jpg'
+import eko from '@/assets/suport_avatar/eko.jpg'
+import dea_afrizal from '@/assets/suport_avatar/dea_afrizal.jpg'
+import david_alfa from '@/assets/suport_avatar/david_alfa.jpg'
+import code_kyra from '@/assets/suport_avatar/code_kyra.jpg'
+import bang_taro from '@/assets/suport_avatar/bang_taro.jpeg'
+import ahmad_muhyidin from '@/assets/suport_avatar/ahmad_muhyidin.jpeg'
 import Tilt from 'react-parallax-tilt'
 
 

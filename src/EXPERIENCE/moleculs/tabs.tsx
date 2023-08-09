@@ -1,7 +1,7 @@
 import { Tabs } from 'flowbite-react';
 import { HiAdjustments, HiClipboardList, HiUserCircle } from 'react-icons/hi';
-import Work_Timeline from './work_timeline';
-import Certifacate_Timeline from './certifacate';
+import Work_Timeline from '@/EXPERIENCE/moleculs/work_timeline';
+import Certifacate_Timeline from '@/EXPERIENCE/moleculs/certifacate';
 
 export default function Tab_Experience() {
     return (

@@ -1,12 +1,5 @@
-import reactjs_logo from '@/assets/reactjs_logo.svg'
-import vuejs_logo from '@/assets/vuejs_logo.svg'
-import tailwind_logo from '@/assets/tailwindcss_logo.svg'
-import postgresql_logo from '@/assets/postgresql_logo.svg'
-import firebase_logo from '@/assets/firebase_logo.svg'
-import github_logo from '@/assets/github_logo.svg'
-import typescript_logo from '@/assets/typescript_logo.svg'
-import eslint_logo from '@/assets/eslint_logo.svg'
-import vite_logo from '@/assets/vite_logo.svg'
+// icon stack_image
+import icon_stackImage from "@/assets/imported/icon_stackImage";const {reactjs_logo,vuejs_logo,tailwind_logo,postgresql_logo,firebase_logo,github_logo,typescript_logo,eslint_logo,vite_logo} = icon_stackImage
 
 export const stack_image = [
     {

@@ -1,12 +1,16 @@
 import Button_Gradient  from "@/HEADER/components/atoms/button_popover";
 import Button_Default from "@/HEADER/components/atoms/button_default";
 import { style_hover } from "@/utility/gradient_color";
-import hero_brain from '@/assets/hero_brain.png'
 import Tilt from 'react-parallax-tilt'
 import Absolute_Brain, { InBrain } from "@/HEADER/components/moleculs/absolute_brain";
-import Line from '@/assets/line.tsx'
 import { useEffect, useState } from "react";
 import Venus_Anim from "@/HEADER/components/moleculs/venus_anim";
+import ActiveStart from "@/utility/active_star_theme";
+
+
+// Icon small
+import icon_assets from '@/assets/imported/icon_assets';const {hero_brain,Line} = icon_assets
+
 // Gradient Color
 const {hover_text_gradient,hover_button_gradient} = style_hover()
 
@@ -49,7 +53,7 @@ export default function Hero() {
 <>
       {/* Left */}
     <div className="flex-grow-0 md:w-7/12"  data-aos="fade-in" data-aos-duration='3000' data-aos-once={true} data-aos-offset={-10} > 
-        <Button_Gradient props={{text:'Trust By Erlanggaht',classN:""}}/>
+        <Button_Gradient props={{text:'Trust By Erlanggaht',classN:"",ActiveStar:() => ActiveStart() }}/>
         <h1 className="hero_title font-extrabold text-6xl md:7xl md:py-3 pt-9">More Than Just A  
           <span className="text-transparent  bg-clip-text bg-gradient-to-r from-ping to-ungu"> Creative </span> 
          Project</h1>
@@ -57,7 +61,7 @@ export default function Hero() {
         
         <div className="flex gap-2">
           <Button_Default props={{text:"Let's Talk",icon:false,className:`bg-white text-dasar font-[700] ${hover_button_gradient}`,link:"https://ig.me/m/erlanggaht93"}}/>
-          <Button_Default props={{text:"Projects",icon:true,className:`bg-transparent enabled:hover:bg-transparent ${hover_text_gradient}`, link:'#project'}}/>
+          <Button_Default props={{text:"Star Theme",icon:true,className:`bg-transparent enabled:hover:bg-transparent ${hover_text_gradient}`, ActiveStar : () => ActiveStart()}} />
         </div>
 
     </div> </>

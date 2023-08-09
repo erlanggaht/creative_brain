@@ -1,4 +1,4 @@
-import erlanggaht93 from '@/assets/erlanggaht93.png'
+import erlanggaht93 from '@/assets/project_image/erlanggaht93.png'
 
 export default function Card2() {
 

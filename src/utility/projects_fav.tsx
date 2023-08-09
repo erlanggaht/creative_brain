@@ -1,20 +1,11 @@
-import resep_asik from '@/assets/resep_asik.png'
-import digital_quran from '@/assets/digitial_quran.png'
-import catatan_sumbangan from '@/assets/catatan-sumbangan.png'
-import sinar_asih from '@/assets/sinar_asih.png'
+import resep_asik from '@/assets/project_image/resep_asik.png'
+import digital_quran from '@/assets/project_image/digitial_quran.png'
+import catatan_sumbangan from '@/assets/project_image/catatan-sumbangan.png'
+import sinar_asih from '@/assets/project_image/sinar_asih.png'
 
 
 // Icon 
-import nextjs from '@/assets/nextjs.svg'
-import tailwind from '@/assets/tailwind.svg'
-import islamic from '@/assets/islamic.png'
-import mongodb from '@/assets/mongodb.svg'
-import swr from '@/assets/swr.png'
-import vue from '@/assets/vuejs.svg'
-import express from '@/assets/express.svg'
-import postgress from '@/assets/postgresql.svg'
-import elephantsql from '@/assets/elephtansql.svg'
-import daisyui from '@/assets/daisyui.svg'
+import icon_assets from '@/assets/imported/icon_assets';const {nextjs,islamic,tailwind,mongodb,swr,vue,express,postgress,elephantsql,daisyui} = icon_assets
 
 
 // Note beri spasi 2 kali pada value project detail -> value arrray stack title
