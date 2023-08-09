@@ -144,7 +144,7 @@ input,input:focus,input:active {
 }
 
 .hero_title:hover {
-  text-shadow: 2px -5px 60px #fff;
+  text-shadow: 2px -5px 40px #fff;
   transition: ease-in-out .4s;
   cursor: text;
 }

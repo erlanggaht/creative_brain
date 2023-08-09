@@ -7,8 +7,10 @@ import Writer_Terminal from '@/MAIN-CONTENT/atoms/writer_terminal'
 import { Tooltip } from 'flowbite-react';
 import axios from 'axios';
 
-const url_get_guestbook = 'http://localhost:4001/guest_comment'
-const url_add_guestbook = 'http://localhost:4001/guest_add'
+
+// Endpoint
+const url_get_guestbook = `${import.meta.env.VITE_HOST}/guest_comment`
+const url_add_guestbook = `${import.meta.env.VITE_HOST}/guest_add`
 
 type User = {
 name : String,
@@ -17,8 +19,8 @@ id : Number,
 website : String
 
 }
-
 export default function GuestBook() {
+
     const { loginGuest_active, setLoginGuest_active, setWait, wait }: any = useContext(GlobalContext)
     const [data_guestbook, setDataGuestbook] = useState<User[] | Boolean>([])
     const [dataChange,setDataChange] = useState(false)

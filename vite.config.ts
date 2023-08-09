@@ -3,7 +3,6 @@ import react from '@vitejs/plugin-react'
 import path from 'path'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
 
-
 const DEFAULT_OPTIONS = {
   test: /\.(jpe?g|png|gif|tiff|webp|avif)$/i,
   exclude: undefined,
@@ -70,6 +69,7 @@ const DEFAULT_OPTIONS = {
 export default defineConfig({
   plugins: [react(),ViteImageOptimizer(DEFAULT_OPTIONS
   ),],
+
   resolve: {
     alias: {
       // @ts-ignore
