@@ -63,6 +63,8 @@ body {
 }
 
 
+
+
 @media (max-width: 768px) {
   [role='tablist'] {
     border-bottom: solid 2px #7079FE;
@@ -74,6 +76,12 @@ body {
     /* width: 90px;
     text-align: center; */
     justify-content: flex-start;
+  }
+
+  [data-testid='modal'] > div{
+    display:  flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 

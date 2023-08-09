@@ -117,17 +117,19 @@ export default function GuestBook() {
             <h1 className='text-5xl text-right'>Guestbook</h1>
 
             {loginGuest_active ?
-                <div className='text-left md:pl-32 mt-20 flex items-center' data-aos='zoom-out' data-aos-once={true}>
+                <div className='text-left md:pl-32 mt-20 flex-col items-center' data-aos='zoom-out' data-aos-once={true}>
                     <Tooltip
                         content="Press Enter for comment"
                         placement="top"
                     >
-                        <input placeholder='comment' className='text-sm pr-2 p-1 ml-3 text-ungu bg-transparent w-32 mr-12 border-b border-ungu focus:text-sm6 focus:outline-none' onKeyDown={(e) => Submit_Comment(e)} ref={refComment} />
+                        <input placeholder='comment' className='text-sm pr-2 p-1 ml-3 text-ungu bg-transparent w-full md:w-32 mr-12 border-b border-ungu focus:text-sm6 focus:outline-none' onKeyDown={(e) => Submit_Comment(e)} ref={refComment} />
                     </Tooltip>
-                    <a href='#' className=' group  text-lg items-center transition-all  hover:transition-all active:scale-90 active:text-gray-500 pt-2' onClick={(e) => Logout_Guest(e)} > Logout   <HiOutlineArrowRight className=" w-0 group-hover:h-5 group-hover:w-5 transition-all inline mr-2" />
+                    <div className='flex items-center mt-4 ml-4'>
+                    <a href='#' className=' group  text-lg items-center transition-all  hover:transition-all active:scale-90 active:text-gray-500 pt-1' onClick={(e) => Logout_Guest(e)} > Logout   <HiOutlineArrowRight className=" w-0 group-hover:h-5 group-hover:w-5 transition-all inline mr-2" />
                     </a>
-                    <div className='text-gray-600 pt-2'>
+                    <div className='text-gray-600 pt-1'>
                         {wait ? <Writer_Terminal props={{ text_string: "Wait. is logging out ...", cursor: '|', delay: 80, pause: 3000,loop:true }} /> : "from " + localStorage.getItem('guest_name')}
+                    </div>
                     </div>
                 </div>
                 : <Login_Guestbook />}
