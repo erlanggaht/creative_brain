@@ -7,6 +7,9 @@ import Writer_Terminal from '@/MAIN-CONTENT/atoms/writer_terminal'
 import { Tooltip } from 'flowbite-react';
 import axios from 'axios';
 
+// Audio
+import audio from '@/assets/imported/audio';const {logout,send} = audio
+
 
 // Endpoint
 // @ts-ignore
@@ -34,7 +37,7 @@ export default function GuestBook() {
         setTimeout(() => {
             setLoginGuest_active(false)
             setWait(false)
-            const audio_logout =  new Audio('/src/assets/logout.mp3')
+            const audio_logout =  new Audio(logout)
             setTimeout(() => { audio_logout.play()},100)
         }, 3000)
         
@@ -102,7 +105,7 @@ export default function GuestBook() {
                         setDataChange(true)
                                  // @ts-ignore
                         refComment.current.value = ''
-                        const audio_show =  new Audio('/src/assets/send.mp3')
+                        const audio_show =  new Audio(send)
                         setTimeout(() => { audio_show.play()},200)
                     }, 400)
             }

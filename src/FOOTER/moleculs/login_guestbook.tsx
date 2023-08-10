@@ -2,6 +2,10 @@ import { GlobalContext } from '@/Context/Global_Context';
 import { Button, Label, Modal, TextInput } from 'flowbite-react';
 import { useState, useRef, useContext, useEffect } from 'react'
 
+
+// Audio
+import audio from '@/assets/imported/audio';const {submit_guest,join} = audio
+
 export default function Login_Guestbook() {
     const { loginGuest_active, setLoginGuest_active, wait, setWait }: any = useContext(GlobalContext)
     const [openModal, setOpenModal] = useState<Boolean | false>(false);
@@ -22,7 +26,7 @@ export default function Login_Guestbook() {
             setTimeout(() => { 
                 alert('please fill in the name column!')
             },100)
-            const audio_error =  new Audio('/src/assets/submit_guest.mp3')
+            const audio_error =  new Audio(submit_guest)
             audio_error.play()
             return
         } 
@@ -30,7 +34,7 @@ export default function Login_Guestbook() {
             setTimeout(() => { 
                 alert('please use " http:// "  or " https:// " ')            
             },100)
-            const audio_error =  new Audio('/src/assets/submit_guest.mp3')
+            const audio_error =  new Audio(submit_guest)
             audio_error.play()
             return
         } 
@@ -38,7 +42,7 @@ export default function Login_Guestbook() {
             setTimeout(() => { 
                 alert('please use " http:// "  or " https:// " ')            
             },100)
-            const audio_error =  new Audio('/src/assets/submit_guest.mp3')
+            const audio_error =  new Audio(submit_guest)
             audio_error.play()
             return
         } 
@@ -48,7 +52,7 @@ export default function Login_Guestbook() {
         localStorage.setItem('login_actv', 'true')
         setOpenModal(false)
         setLoginGuest_active(true)
-        const audio_submit =  new Audio('/src/assets/submit_guest.mp3')
+        const audio_submit =  new Audio(submit_guest)
         setTimeout(() => { audio_submit.play()},100)
 }
 
@@ -76,7 +80,7 @@ export default function Login_Guestbook() {
         setTimeout(async() => {
             setOpenModal(true)
             setWait(false)
-            const audio_show =  new Audio('/src/assets/join.mp3')
+            const audio_show =  new Audio(join)
                 setTimeout(() => { audio_show.play()},100)
         }, 1500);
 
