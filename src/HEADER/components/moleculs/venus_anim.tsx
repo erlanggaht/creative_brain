@@ -1,5 +1,5 @@
-
 export default function Venus_Anim() {
+
   return (
     <>
     <div className="spinner-box">

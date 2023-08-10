@@ -34,6 +34,8 @@ export default function GuestBook() {
         setTimeout(() => {
             setLoginGuest_active(false)
             setWait(false)
+            const audio_logout =  new Audio('/src/assets/logout.mp3')
+            setTimeout(() => { audio_logout.play()},100)
         }, 3000)
         
     }
@@ -100,6 +102,8 @@ export default function GuestBook() {
                         setDataChange(true)
                                  // @ts-ignore
                         refComment.current.value = ''
+                        const audio_show =  new Audio('/src/assets/send.mp3')
+                        setTimeout(() => { audio_show.play()},200)
                     }, 400)
             }
             catch (error) {
@@ -117,13 +121,15 @@ export default function GuestBook() {
             <h1 className='text-5xl text-right'>Guestbook</h1>
 
             {loginGuest_active ?
-                <div className='text-left md:pl-32 mt-20 flex-col items-center' data-aos='zoom-out' data-aos-once={true}>
+                <div className='text-left md:pl-32 mt-20 flex flex-col sm:flex-row  md:items-center items-start' data-aos='zoom-out' data-aos-once={true}>
+                    <div>
                     <Tooltip
                         content="Press Enter for comment"
                         placement="top"
                     >
-                        <input placeholder='comment' className='text-sm pr-2 p-1 ml-3 text-ungu bg-transparent w-full md:w-32 mr-12 border-b border-ungu focus:text-sm6 focus:outline-none' onKeyDown={(e) => Submit_Comment(e)} ref={refComment} />
+                        <input placeholder='comment' className='text-sm pr-2 p-1 ml-3 text-ungu bg-transparent w-full md:w-40 mr-12 border-b border-ungu focus:text-sm6 focus:outline-none' onKeyDown={(e) => Submit_Comment(e)} ref={refComment} />
                     </Tooltip>
+                    </div>
                     <div className='flex items-center mt-4 ml-4'>
                     <a href='#' className=' group  text-lg items-center transition-all  hover:transition-all active:scale-90 active:text-gray-500 pt-1' onClick={(e) => Logout_Guest(e)} > Logout   <HiOutlineArrowRight className=" w-0 group-hover:h-5 group-hover:w-5 transition-all inline mr-2" />
                     </a>

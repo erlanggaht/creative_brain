@@ -37,6 +37,7 @@ function App() {
   // Loading
   useEffect(() => {
 
+   
 
     if (document.readyState === 'interactive') {
       setLoading(true)
@@ -47,13 +48,17 @@ function App() {
     }
     window.onload = function () {
       setLoading(false)
+      
     }
+    
+     
     return () => {
       window.onload = function () {
         setLoading(false)
       }
 
     }
+    
   }, []);
 
 
@@ -72,7 +77,9 @@ function App() {
 
   // UserAgent Block
   useEffect(() => {
+    
     (function (agent) {
+      
       switch (true) {
         case agent.indexOf('firefox') > -1: console.log("Your browser : " + agent); break
         case agent.indexOf('chrome') > -1: console.log("Your browser : " + agent); break
@@ -84,6 +91,7 @@ function App() {
         default: alert('sorry, this web must use the latest browser! ')
       }
     })(window.navigator.userAgent.toLowerCase())
+
 
   }, [])
 
@@ -130,6 +138,8 @@ function App() {
 
       }
     }
+
+    
   }, [])
 
 
@@ -139,7 +149,7 @@ function App() {
 
       {/* To Top Button Scroll   */}
       <button onClick={() => topFunction()} id="myBtn" title="Go to top"
-        className='fixed bottom-[20px] right-4 md:right-2 z-50 border-0 outline-none bg-gradient-to-tl from-ping to-ungu text-white cursor-pointer p-3 rounded-full text-md hover:opacity-80 active:opacity-50' style={{transition:'ease-in-out .4s'}}>
+        className='fixed bottom-[20px] active:scale-95 right-4 md:right-2 z-50 border-0 outline-none bg-gradient-to-tl from-ping to-ungu text-white cursor-pointer p-3 rounded-full text-md hover:opacity-80 active:opacity-50' style={{transition:'ease-in-out .4s'}}>
           <img src={button_top} alt='t/b' height={28} width={28} />
         </button>
 

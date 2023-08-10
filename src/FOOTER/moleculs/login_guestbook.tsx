@@ -18,17 +18,39 @@ export default function Login_Guestbook() {
         const required_http = websiteRef.current?.value.includes('htt')
         const required_https = websiteRef.current?.value.includes('://')
 
-        if (nameRef.current?.value == '') return alert('please fill in the name column!')
-        if (!required_http) return alert('please use " http:// "  or " https:// " ')
-        if (!required_https) return alert('please use " https:// " or " https:// " ')
-
+        if (nameRef.current?.value == '') {
+            setTimeout(() => { 
+                alert('please fill in the name column!')
+            },100)
+            const audio_error =  new Audio('/src/assets/submit_guest.mp3')
+            audio_error.play()
+            return
+        } 
+        if (!required_http) {
+            setTimeout(() => { 
+                alert('please use " http:// "  or " https:// " ')            
+            },100)
+            const audio_error =  new Audio('/src/assets/submit_guest.mp3')
+            audio_error.play()
+            return
+        } 
+        if (!required_https) {
+            setTimeout(() => { 
+                alert('please use " http:// "  or " https:// " ')            
+            },100)
+            const audio_error =  new Audio('/src/assets/submit_guest.mp3')
+            audio_error.play()
+            return
+        } 
 
         localStorage.setItem('guest_name', nameRef.current?.value)
         localStorage.setItem('website_link', websiteRef.current?.value == '' ? "" : websiteRef.current?.value)
         localStorage.setItem('login_actv', 'true')
         setOpenModal(false)
         setLoginGuest_active(true)
-    }
+        const audio_submit =  new Audio('/src/assets/submit_guest.mp3')
+        setTimeout(() => { audio_submit.play()},100)
+}
 
 
     // Get Login Guestbook Local_Storage >> if Login Active
@@ -37,10 +59,12 @@ export default function Login_Guestbook() {
         const login_actv = window.localStorage.getItem('login_actv')
 
         if (!name_guest || !login_actv || 1) console.log('login as guestbook skuy! in Footer ')
+       
 
         return () => {
             if (name_guest || loginGuest_active) {
                 setLoginGuest_active(true)
+                   
             }
         }
     }, [])
@@ -49,9 +73,11 @@ export default function Login_Guestbook() {
     function Fnlogin_guest() {
         setWait(true)
         
-        setTimeout(() => {
+        setTimeout(async() => {
             setOpenModal(true)
             setWait(false)
+            const audio_show =  new Audio('/src/assets/join.mp3')
+                setTimeout(() => { audio_show.play()},100)
         }, 1500);
 
 

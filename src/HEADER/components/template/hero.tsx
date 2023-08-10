@@ -19,11 +19,14 @@ export default function Hero() {
 
 
   useEffect(() => {
+    
     if(document.readyState === 'interactive') {
       setLoading_show(true)
+      
     }
     setTimeout(() => {
     setLoading_show(false)
+  
     },3000)
 
     var x = window.matchMedia("(max-width: 640px)")
@@ -41,6 +44,8 @@ export default function Hero() {
     }
   },[])
 
+ 
+
 
   return (
     <>
@@ -53,7 +58,7 @@ export default function Hero() {
 <>
       {/* Left */}
     <div className="flex-grow-0 md:w-7/12"  data-aos="fade-in" data-aos-duration='3000' data-aos-once={true} data-aos-offset={-10} > 
-        <Button_Gradient props={{text:'Trust By Erlanggaht',classN:"",ActiveStar:() => ActiveStart() }}/>
+        <Button_Gradient props={{text:'Trust by Erlanggaht',classN:"active:scale-95",ActiveStar:() => ActiveStart() }}/>
         <h1 className="hero_title font-extrabold text-6xl md:7xl md:py-3 pt-9">More Than Just A  
           <span className="text-transparent  bg-clip-text bg-gradient-to-r from-ping to-ungu"> Creative </span> 
          Project</h1>
