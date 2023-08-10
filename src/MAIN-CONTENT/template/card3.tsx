@@ -1,5 +1,5 @@
-import mobile from '@/assets/project_image/mobile.png'
-import tablet from '@/assets/project_image/tablet.png'
+import mobile from '@/assets/project_image/mobile.webp'
+import tablet from '@/assets/project_image/tablet.webp'
 
 
 export default function Card3() {
@@ -18,9 +18,8 @@ export default function Card3() {
       </section>
     
         <figure className='flex justify-center relative'>
-          {/* <img alt='erlanggaht' src={mobile} className='max-w-full h-auto mt-32 opacity-75 shadow rounded-xl group-hover:opacity-100 ' /> */}
-          <img alt='erlanggaht' src={tablet} className='max-w-full h-auto mt-24 sm:mt-20 rotate-45 p-3  shadow rounded-xl group-hover:opacity-100 absolute left-1 -top-20' />
-          <img alt='erlanggaht' src={mobile} className='max-w-full h-auto mt-24 sm:mt-20  p-3 opacity-95 shadow rounded-xl absolute right-1 drop-shadow' />
+          <img alt='erlanggaht' src={tablet} height={320} width={320} className='md:w-full mt-24 sm:mt-20 rotate-45 p-3  shadow rounded-xl group-hover:opacity-100 absolute left-1 -top-20' />
+          <img alt='erlanggaht' src={mobile} height={320} width={320} className=' mt-24 sm:mt-20  p-3 opacity-95 shadow rounded-xl absolute right-1 drop-shadow' />
         </figure>
 
     </div>

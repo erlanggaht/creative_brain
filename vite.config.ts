@@ -69,8 +69,11 @@ const DEFAULT_OPTIONS = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(),ViteImageOptimizer(DEFAULT_OPTIONS
-  ),],
+  plugins: [
+    react(),
+    ViteImageOptimizer(DEFAULT_OPTIONS),
+   
+],
   define: {
     __HOST__: `"${process.env.HOST}"`,
   },

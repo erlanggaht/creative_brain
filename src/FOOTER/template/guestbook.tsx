@@ -38,7 +38,9 @@ export default function GuestBook() {
             setLoginGuest_active(false)
             setWait(false)
             const audio_logout =  new Audio(logout)
-            setTimeout(() => { audio_logout.play()},100)
+            setTimeout(() => { audio_logout
+                .preload = 'auto';
+                audio_logout.play()},100)
         }, 3000)
         
     }
@@ -106,7 +108,10 @@ export default function GuestBook() {
                                  // @ts-ignore
                         refComment.current.value = ''
                         const audio_show =  new Audio(send)
-                        setTimeout(() => { audio_show.play()},200)
+                        setTimeout(() => { audio_show
+                            .preload = 'auto';
+                            audio_show.play()
+                        },200)
                     }, 400)
             }
             catch (error) {

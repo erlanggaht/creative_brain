@@ -27,6 +27,7 @@ export default function Login_Guestbook() {
                 alert('please fill in the name column!')
             },100)
             const audio_error =  new Audio(submit_guest)
+            audio_error.preload = 'auto';
             audio_error.play()
             return
         } 
@@ -35,6 +36,7 @@ export default function Login_Guestbook() {
                 alert('please use " http:// "  or " https:// " ')            
             },100)
             const audio_error =  new Audio(submit_guest)
+            audio_error.preload = 'auto';
             audio_error.play()
             return
         } 
@@ -43,6 +45,7 @@ export default function Login_Guestbook() {
                 alert('please use " http:// "  or " https:// " ')            
             },100)
             const audio_error =  new Audio(submit_guest)
+            audio_error.preload = 'auto';
             audio_error.play()
             return
         } 
@@ -53,7 +56,9 @@ export default function Login_Guestbook() {
         setOpenModal(false)
         setLoginGuest_active(true)
         const audio_submit =  new Audio(submit_guest)
-        setTimeout(() => { audio_submit.play()},100)
+        setTimeout(() => { audio_submit
+            .preload = 'auto'
+            audio_submit.play()},100)
 }
 
 
@@ -81,7 +86,10 @@ export default function Login_Guestbook() {
             setOpenModal(true)
             setWait(false)
             const audio_show =  new Audio(join)
-                setTimeout(() => { audio_show.play()},100)
+                setTimeout(() => { audio_show
+                    .preload = 'auto'
+                    audio_show.title = 'gudd'
+                    audio_show.play()},100)
         }, 1500);
 
 

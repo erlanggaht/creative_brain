@@ -1,4 +1,4 @@
-import erlanggaht93 from '@/assets/project_image/erlanggaht93.png'
+import erlanggaht93 from '@/assets/project_image/erlanggaht93.webp'
 
 export default function Card2() {
 
@@ -16,7 +16,7 @@ export default function Card2() {
       </section>
     
         <figure className='absolute bottom-0 md:inline'>
-          <img alt='erlanggaht' src={erlanggaht93} className='max-w-full h-auto scale-125 md:scale-100 sm:ml-16 mt-32  shadow sm:rounded-xl ' />
+          <img alt='erlanggaht' src={erlanggaht93} height={320} width={320} className='md:w-full scale-125 md:scale-100 sm:ml-16 mt-32  shadow sm:rounded-xl ' />
         </figure>
 
     </div>

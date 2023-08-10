@@ -1,6 +1,7 @@
 import { Avatar, Dropdown, Navbar } from 'flowbite-react';
 import { style_hover } from '@/utility/gradient_color';
 import ActiveStart from '@/utility/active_star_theme';
+import erlangga from '@/assets/suport_avatar/erlangga.webp'
 
 const {text_gradient} = style_hover()
 
@@ -29,7 +30,7 @@ export default function Navigasi_Mobile() {
       <div className="flex md:order-2">
         <Dropdown
           inline
-          label={<Avatar alt="User settings" img="https://res.cloudinary.com/djsizjaee/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_white,b_rgb:262c35/v1690981554/qjau8vdofmufxojclprq.jpg" rounded className='hover:opacity-80'/>}
+          label={<Avatar alt="User settings" img={erlangga} rounded className='hover:opacity-80'/>}
           
         >
           <Dropdown.Header className='z-[999]'>

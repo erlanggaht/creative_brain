@@ -1,7 +1,7 @@
-import resep_asik from '@/assets/project_image/resep_asik.png'
-import digital_quran from '@/assets/project_image/digitial_quran.png'
-import catatan_sumbangan from '@/assets/project_image/catatan-sumbangan.png'
-import sinar_asih from '@/assets/project_image/sinar_asih.png'
+import resep_asik from '@/assets/project_image/resep_asik.webp'
+import digital_quran from '@/assets/project_image/digitial_quran.webp'
+import catatan_sumbangan from '@/assets/project_image/catatan-sumbangan.webp'
+import sinar_asih from '@/assets/project_image/sinar_asih.webp'
 
 
 // Icon 

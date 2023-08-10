@@ -54,7 +54,7 @@ input,input:focus,input:active {
 
   .hero_shadow{
     box-shadow :16px 32px 200px  #f88396;  transform-style: preserve-3d;
-    height: 220px;
+    height: 150px;
     width: 230px;
     position: absolute;
     background-color: transparent;

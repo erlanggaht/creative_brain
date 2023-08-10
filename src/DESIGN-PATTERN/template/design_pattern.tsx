@@ -15,8 +15,8 @@ export default function Design_Pattern() {
             before:w-12 before:h-12 before:bg-ping before:absolute before:right-4 before:top-4 before:rotate-12
             after:w-9 after:h-9 after:bg-white after:absolute after:left-4 after:bottom-4 after:-rotate-12 after:rounded-sm
           '>
-            <h4 className='text-sm text-gray-500'>brain_creative.tsx</h4>
-            <h5 className='mb-12 text-sm font-thin text-gray-500'>atomic_design</h5>
+            <p className='text-sm text-gray-500'>brain_creative.tsx</p>
+            <p className='mb-12 text-sm font-thin text-gray-500'>atomic_design</p>
             <div className='p-6 pb-0 lg:p-12' id='design_p_timeline'>
             <VerticalTimeline/>
             <VerticalTimeline_down/>
