@@ -2,6 +2,11 @@ import mobile from '@/assets/project_image/mobile.webp'
 import tablet from '@/assets/project_image/tablet.webp'
 
 
+// Lazy Loading
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { afterLoadingImage, beforeLoadingImage } from "@/utility/loader_image";
+
+
 export default function Card3() {
 
   return (
@@ -18,8 +23,28 @@ export default function Card3() {
       </section>
     
         <figure className='flex justify-center relative'>
-          <img alt='erlanggaht' src={tablet} height={320} width={320} className='md:w-full mt-24 sm:mt-20 rotate-45 p-3  shadow rounded-xl group-hover:opacity-100 absolute left-1 -top-20' />
-          <img alt='erlanggaht' src={mobile} height={320} width={320} className=' mt-24 sm:mt-20  p-3 opacity-95 shadow rounded-xl absolute right-1 drop-shadow' />
+          <LazyLoadImage
+                alt={'erlanggaht_tablet'}
+                src={tablet}
+                height={'100%'}
+                width={'100%'}
+                wrapperClassName='lazy-loader'
+                beforeLoad={() => beforeLoadingImage()}
+                afterLoad={() => afterLoadingImage()}
+                effect='blur'
+                className='md:w-full mt-24 sm:mt-20 rotate-45 p-3  shadow rounded-xl group-hover:opacity-100 absolute left-1 top-20 '
+              />
+                        <LazyLoadImage
+                alt={'erlanggaht_linkbio_Mobile'}
+                src={mobile}
+                height={'100%'}
+                width={'100%'}
+                wrapperClassName='lazy-loader'
+                beforeLoad={() => beforeLoadingImage()}
+                afterLoad={() => afterLoadingImage()}
+                effect='blur'
+                className='md:w-full mt-24 sm:mt-20  p-3  shadow rounded-xl group-hover:opacity-100 absolute -left-3   top-6'
+              />
         </figure>
 
     </div>

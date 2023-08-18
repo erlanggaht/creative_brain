@@ -2,6 +2,11 @@ import copy_clone from '@/utility/copy_clone'
 import Modal_Button from '@/MAIN-CONTENT/moleculs/modal'
 import Button_Gradient from '@/HEADER/components/atoms/button_popover'
 
+// Lazy Loading
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { afterLoadingImage, beforeLoadingImage } from "@/utility/loader_image";
+
+
 interface Card_Project {
   props: {
     image: string,
@@ -35,8 +40,18 @@ export default function Card_Project({ props }: Card_Project) {
           </div>
         </div>
       
-          <div className=' flex flex-col md:opacity-90 group-hover:opacity-100  transition-transform hover:transition-transform mt-12 md:mt-0  ' data-aos="fade-in" >
-            <img src={image} alt={title} className='shadow-[0_0_12px_1px_#7079FE]    ' width={525} height={525}  />
+          <div className='  md:opacity-90 group-hover:opacity-100  transition-transform hover:transition-transform mt-12 md:mt-0  ' data-aos="fade-in" >
+            <LazyLoadImage
+                alt={title}
+                src={image}
+                height={'100%'}
+                width={'100%'}
+                wrapperClassName='lazy-loader'
+                beforeLoad={() => beforeLoadingImage()}
+                afterLoad={() => afterLoadingImage()}
+                effect='blur'
+                className='shadow-[0_0_12px_1px_#7079FE] w-[525px] h-[256px]'
+              />
             <a href={link} target={'_blank'}>
               <Button_Gradient props={{ text: 'Visit', classN: 'rounded-none shadow-[0_0_12px_1px_#7079FE] w-full ' }} />
             </a>

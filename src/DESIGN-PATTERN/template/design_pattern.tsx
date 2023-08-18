@@ -3,6 +3,12 @@ import Tilt from 'react-parallax-tilt'
 import atomic from '@/assets/atomic.png'
 import { HiOutlineArrowRight } from 'react-icons/hi';
 
+
+// Lazy Loading
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { afterLoadingImage, beforeLoadingImage } from "@/utility/loader_image";
+
+
 export default function Design_Pattern() {
   return (
     <>
@@ -24,8 +30,18 @@ export default function Design_Pattern() {
           </section>
         </Tilt>
 
-        <div className='relative md:flex md:flex-row-reverse '>
-          <img src={atomic} alt='atomic_design' width={470} height={470} className='border-2 border-ping p-[0px]   hidden md:inline  mx-auto atomic_image_shadow border-t-[#222] ' data-aos={'fade-zoom'} data-aos-delay={1500} data-aos-once={true}/>
+        <div className='relative md:flex '>
+          <LazyLoadImage
+                alt={'atomic_design'}
+                src={atomic}
+                height={'100%'}
+                width={'100%'}
+                wrapperClassName='lazy-loader'
+                beforeLoad={() => beforeLoadingImage()}
+                afterLoad={() => afterLoadingImage()}
+                effect='blur'
+                className='border-2 border-ping p-[0px] w-[520px] sm:ml-6 ml-0   hidden md:inline  mx-auto atomic_image_shadow border-t-[#222] '
+              />
           <div className='p-0 py-0 md:p-12 xl:py-28 max-w-[580px]'>
           <p className='text-gray-500 text-2xl mt-12 xl:mt-2'>
             <span className='text-white'>Want to Learn Atomic Design </span>

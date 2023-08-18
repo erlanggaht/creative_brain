@@ -11,7 +11,7 @@ export const data_experience = [
         text_button: "View Certificate"
     },
     {
-        time: "November 2018",
+        time: "July 2018",
         title: "HackerRank - ID.348984f0bb73",
         desc: " Problem Solving ( Intermediate ) With Javascript",
         view_cert: true,
@@ -19,11 +19,19 @@ export const data_experience = [
         text_button: "View Certifacate"
     },
     {
-        time: "August 2019 - November 2022 ",
+        time: "August 2023 ",
         title: "HackerRank - ID.f1822875acf8",
         desc: "Javascript Basic",
         view_cert: true,
         link_cert: 'https://www.hackerrank.com/certificates/f1822875acf8',
+        text_button: 'View Certificate'
+    },
+    {
+        time: "August 2023 ",
+        title: "HackerRank - ID.f1822875acf8",
+        desc: "Javascript REST API",
+        view_cert: true,
+        link_cert: 'https://www.hackerrank.com/certificates/7f2cc120b1cf',
         text_button: 'View Certificate'
     },
     

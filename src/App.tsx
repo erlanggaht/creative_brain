@@ -20,6 +20,7 @@ import Footer_Content_Bottom from '@/FOOTER/moleculs/footer_content_bottom'
 import { GlobalContext } from '@/Context/Global_Context'
 import GuestBook from '@/FOOTER/template/guestbook'
 import LineScroll from '@/utility/scroll_line'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 // Icon Assets
 import icon_assets from '@/assets/imported/icon_assets';const {button_top} = icon_assets
@@ -193,18 +194,18 @@ function App() {
           {/* Start */}
           <div className='st2 '></div>
           <div className='st3 '></div>
-
-          {/* DESIGN PATTERN  */}
-          <main className='design_pattern my-20 md:my-3'>
-            <Design_Pattern />
-          </main>
-
           {/* MY EXPRERTISE */}
-          <main className='my_expertise relative mt-20 md:mt-60
+          <main className='my_expertise relative mt-20 md:mt-32
         before:h-[3px] before:w-full before:bg-ungu before:absolute before:top-0 before:bg-gradient-to-r   before:from-transparent before:via-ping to-transparent before:-rotate-6
         '>
             <Main_Stack />
           </main>
+
+          {/* DESIGN PATTERN  */}
+          <main className='design_pattern my-20 md:mt-40 md:my-3'>
+            <Design_Pattern />
+          </main>
+
 
           {/* Start */}
           <div className='st '></div>

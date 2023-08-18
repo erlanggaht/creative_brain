@@ -1,5 +1,10 @@
 import erlanggaht93 from '@/assets/project_image/erlanggaht93.webp'
 
+// Lazy Loading
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { afterLoadingImage, beforeLoadingImage } from "@/utility/loader_image";
+
+
 export default function Card2() {
 
   return (
@@ -16,7 +21,17 @@ export default function Card2() {
       </section>
     
         <figure className='absolute bottom-0 md:inline'>
-          <img alt='erlanggaht' src={erlanggaht93} height={320} width={320} className='md:w-full scale-125 md:scale-100 sm:ml-16 mt-32  shadow sm:rounded-xl ' />
+          <LazyLoadImage
+                alt={'erlanggaht_portofolio'}
+                src={erlanggaht93}
+                height={'100%'}
+                width={'100%'}
+                wrapperClassName='lazy-loader'
+                beforeLoad={() => beforeLoadingImage()}
+                afterLoad={() => afterLoadingImage()}
+                effect='blur'
+                className='md:w-full scale-125 md:scale-100 sm:ml-16 mt-32  shadow sm:rounded-xl '
+              />
         </figure>
 
     </div>

@@ -10,7 +10,6 @@ html {
   height: 100%;
   box-sizing: border-box;
   scroll-behavior: smooth;
-
 }
 
 
@@ -33,6 +32,8 @@ body {
   position: relative;
   touch-action: pan-y;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-padding: 80px;
 }
 
 [data-testid="flowbite-navbar-toggle"]  {
@@ -161,4 +162,15 @@ body {
   border-radius: 50%;
   transition: 0.1s ease-out;
   position: fixed;;
+}
+
+.lazy_skelton {
+}
+
+.lazy-loader {
+  display: inline !important;
+  
+}
+.lazy-load-image-background {
+  margin: 0 auto !important;
 }

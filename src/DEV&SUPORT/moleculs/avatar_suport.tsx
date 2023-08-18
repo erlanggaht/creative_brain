@@ -1,4 +1,3 @@
-import { Avatar } from "flowbite-react";
 
 
 import sandhika from '@/assets/suport_avatar/sandhika.jpg'
@@ -8,16 +7,15 @@ import david_alfa from '@/assets/suport_avatar/david_alfa.jpg'
 import code_kyra from '@/assets/suport_avatar/code_kyra.jpg'
 import bang_taro from '@/assets/suport_avatar/bang_taro.jpeg'
 import ahmad_muhyidin from '@/assets/suport_avatar/ahmad_muhyidin.jpeg'
+import no_image from '@/assets/suport_avatar/no_image.svg'
 import Tilt from 'react-parallax-tilt'
-
-
 
 
 export const avatar_card = [
 
     {
         name : "Mother",
-        image : "",
+        image : no_image,
         desc : "My Prayer",
         link_ig : "#",
         disable : true ,
@@ -92,6 +90,12 @@ export const avatar_card = [
 ]
 
 
+// Lazy Loading
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { afterLoadingImage, beforeLoadingImage } from "@/utility/loader_image";
+
+
+
 export default function Avatar_Suport() {
   return (
     <>
@@ -99,13 +103,17 @@ export default function Avatar_Suport() {
     {avatar_card.map ((m,i) => {
         return <div className='card_avatar bloc w-72 md:w-60 snap-start opacity-100 md:opacity-70 md:hover:opacity-100 transition-all hover:transition-all group' key={i} data-aos='zoom-in'>
         <Tilt>
-        <Avatar
-          img={m.image}
-          size="lg"
-          rounded={true}
-          alt={m.name}
-          className="hover:opacity-80"
-        />
+        <LazyLoadImage
+                alt={m.name}
+                src={m.image}
+                height={'100%'}
+                width={'100%'}
+                wrapperClassName='lazy-loader'
+                beforeLoad={() => beforeLoadingImage()}
+                afterLoad={() => afterLoadingImage()}
+                effect='blur'
+                className='hover:opacity-90 transition-all h-20 w-20 mx-auto rounded-full'
+              />
         </Tilt>
         <p className='text-center pt-5 text-xl'>{m.name}</p>
         <p className='text-center pt-2 text-sm text-[#464957] h-8 capitalize group-hover:text-ungu transition-all hover:transition-all  duration-150'>{m.desc}</p>

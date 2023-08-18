@@ -12,7 +12,7 @@ import hero_brain from '@/assets/icon/hero_brain.webp'
 import Line from '@/assets/icon/line.tsx'
 import project_icon from '@/assets/icon/projects_icon.svg'
 import button_top from '@/assets/icon/button_top.svg'
-
+import brain_lazy from '@/assets/icon/hero_brain-lazy.webp'
 
 const icon_assets = {
     nextjs : nextjs,
@@ -28,7 +28,8 @@ const icon_assets = {
     hero_brain : hero_brain,
     Line : Line,
     project_icon : project_icon,
-    button_top : button_top
+    button_top : button_top,
+    brain_lazy : brain_lazy
 }
 
 
