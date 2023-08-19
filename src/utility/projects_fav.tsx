@@ -1,7 +1,7 @@
 import resep_asik from '@/assets/project_image/resep_asik.webp'
 import digital_quran from '@/assets/project_image/digitial_quran.webp'
-import catatan_sumbangan from '@/assets/project_image/catatan-sumbangan.webp'
 import sinar_asih from '@/assets/project_image/sinar_asih.webp'
+import angga_store from '@/assets/project_image/anggastoe.webp'
 
 
 // Icon 
@@ -31,12 +31,12 @@ export default function projects_fav(): any {
             clone: 'https://github.com/erlanggaht/resep-asik.vue.git'
         },
         {
-            image: catatan_sumbangan,
-            link: 'https://catatan-sumbangan.vercel.app',
-            title: "Donation Record",
-            desc: "Donation record web. write receipts and expenses with the CRUD system and display them in the table. it's built with vuejs + postgresql",
-            project_detail:    ['VueJs  ' + vue, 'Tailwinds  ' + tailwind, 'Express  ' + express, 'PostgreSQL  ' + postgress, 'ElephantSql ( Deploy )  ' + elephantsql,],
-            clone: 'https://github.com/erlanggaht/catatan-sumbangan/'
+            image: angga_store,
+            link: 'https://angga-store.vercel.app',
+            title: "Clothing Store",
+            desc: "create a clothing website with login and register features with formic and yup frontend validation ",
+            project_detail:    ['React  ' + nextjs, 'Tailwinds  ' + tailwind, 'Express  ' + express, 'PostgreSQL  ' + postgress, 'ElephantSql ( Deploy )  ' + elephantsql,],
+            clone: 'https://github.com/erlanggaht/angga_store'
         },
 
         {
